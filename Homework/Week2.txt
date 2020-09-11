@@ -1,0 +1,46 @@
+
+#########
+#EXERCISE 1: Fix the following to compile and print
+#########
+print("Hello, ')
+
+	print('my name is "mike".')
+		
+		print" What is your name?"
+		
+	  prnt(" What is your favorite color?")
+	  
+ print(" Have you ever "flown" in an airplane? I have. It was fun.")
+
+#########
+#EXERCISE 2: Fix the following to compile and print
+#########
+ 
+ word1 = My
+ word2 = 'favorite '
+ word3 = 'color "
+ 4word = "is "
+ word5 == "green"
+ 
+ sentance = [word1, word2, word3, 4word, word5, "."]
+print(sentance)
+ 
+#########
+#EXERCISE 3: Add a print line below each variable printing out the type of variable 
+#########
+
+value1 = 12345
+
+value2 = 123.45
+
+value3 = "12345"
+
+value4 = "123.45"
+
+value5 = 'hello'
+ 
+
+#########
+#EXERCISE 4: Complete 5 of the 10 exercises in chapter 3. Place them below
+#########
+
