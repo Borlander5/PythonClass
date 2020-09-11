@@ -1,0 +1,14 @@
+--Linux Commands--
+ls: list files
+cd <directory name>: change directory
+mkdir <directory name>: make a directory
+cp <current file> <new file>: Copy file
+mv <current file> <new file>: move file
+
+--Git Commands--
+git clone <repo>: Clone a repository
+git status: List the status of your repo
+git add <filename>: Add the file to your staged commits
+git commit: Commit your staged files
+git push: Push your changes to the origin repo
+git pull: Pull down any changes from the origin repo to your local repo
