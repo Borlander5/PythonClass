@@ -17,12 +17,12 @@ print(" Have you ever 'flown' in an airplane? I have. It was fun.")
 #########
  
 word1 = "My"
-word2 = 'favorite '
-word3 = 'color "
-word4 = "is "
+word2 = 'favorite'
+word3 = 'color'
+word4 = "is"
 word5 = "green"
  
- sentance = [word1, word2, word3, 4word, word5, "."]
+sentance = [word1, word2, word3, word4, word5, "."]
 print(sentance)
  
 #########
@@ -30,15 +30,20 @@ print(sentance)
 #########
 
 value1 = 12345
-
+value_1 = f"{value1} is a integer."
+print(value_1)
 value2 = 123.45
-
+value_2 = f"{value2} is a float."
+print(value_2)
 value3 = "12345"
-
+value_3 = f"{value3} is a string."
+print(value_3)
 value4 = "123.45"
-
+value_4 = f"{value4} is a string."
+print(value_4)
 value5 = 'hello'
- 
+value_5 = f"{value5} is a string."
+print(value_5)
 
 #########
 #EXERCISE 4: Complete 5 of the 10 exercises in chapter 3. Place them below
