@@ -2,25 +2,25 @@
 #########
 #EXERCISE 1: Fix the following to compile and print
 #########
-print("Hello, ')
+print("Hello,")
 
-	print('my name is "mike".')
+print('my name is "mike".')
 		
-		print" What is your name?"
+print("What is your name?")
 		
-	  prnt(" What is your favorite color?")
+print("pyWhat is your favorite color?")
 	  
- print(" Have you ever "flown" in an airplane? I have. It was fun.")
+print(" Have you ever 'flown' in an airplane? I have. It was fun.")
 
 #########
 #EXERCISE 2: Fix the following to compile and print
 #########
  
- word1 = My
- word2 = 'favorite '
- word3 = 'color "
- 4word = "is "
- word5 == "green"
+word1 = "My"
+word2 = 'favorite '
+word3 = 'color "
+word4 = "is "
+word5 = "green"
  
  sentance = [word1, word2, word3, 4word, word5, "."]
 print(sentance)
