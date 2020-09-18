@@ -2,45 +2,103 @@
 #########
 #EXERCISE 1: Fix the following to compile and print
 #########
-print("Hello, ')
+print("Hello")
 
-	print('my name is "mike".')
+print("My name is Mike.")
 		
-		print" What is your name?"
+print("What is your name?")
 		
-	  prnt(" What is your favorite color?")
+print("What is your favorite color?")
 	  
- print(" Have you ever "flown" in an airplane? I have. It was fun.")
+print("Have you ever flown in an airplane? I have. It was fun.")
 
 #########
 #EXERCISE 2: Fix the following to compile and print
 #########
  
- word1 = My
- word2 = 'favorite '
- word3 = 'color "
- 4word = "is "
- word5 == "green"
+word1 = "My"
+word2 = "favorite"
+word3 = "color"
+word4 = "is"
+word5 = "green"
  
- sentance = [word1, word2, word3, 4word, word5, "."]
-print(sentance)
+sentance = [word1, word2, word3, word4, word5, "."]
+message = f"{sentance[0]} {sentance[1]} {sentance[2]} {sentance[3]} {sentance[4]}{sentance[-1]}"
+print(message)
  
 #########
 #EXERCISE 3: Add a print line below each variable printing out the type of variable 
 #########
 
 value1 = 12345
-
+value_1 = f"{value1} is an interger."
+print(value_1)
 value2 = 123.45
-
+value_2 = f"{value2} is a float."
+print(value_2)
 value3 = "12345"
-
+value_3 = f"{value3} is a string."
+print(value_3)
 value4 = "123.45"
-
+value_4 = f"{value4} is a string."
+print(value_4)
 value5 = 'hello'
- 
+value_5 = f"{value5} is a string."
+print(value_5)
 
 #########
 #EXERCISE 4: Complete 5 of the 10 exercises in chapter 3. Place them below
 #########
-
+#3-3
+print("3-3")
+word1 = "car"
+word2 = "boat"
+word3 = "plane"
+word4 = "train"
+word5 = "bicycle"
+sentance = f"My favorite mode of transportation is by {word4} because it is fast and on the ground. I don't like to travel by {word2} and {word3} because they arn't on the ground. I also don't like to travel by {word1} and {word5} because they are not as fast as {word4}."
+print(sentance)
+#3-4
+print("3-4")
+guest = ['Aragorn', 'C.S. Lewis', 'Nobody']
+message_1 = f"{guest[0]}, you are invited to dinner."
+message_2 = f"{guest[1]}, you are invited to dinner."
+message_3 = f"{guest[2]}, you are invited to dinner."
+print(message_1)
+print(message_2)
+print(message_3)
+#3-5
+print("3-5")
+message_0 = f"{guest[2]} can't make it."
+print(message_0)
+guest.remove('Nobody')
+guest.append('The Child')
+message_1 = f"{guest[0]}, you are invited to dinner."
+message_2 = f"{guest[1]}, you are invited to dinner."
+message_3 = f"{guest[2]}, you are invited to dinner."
+print(message_1)
+print(message_2)
+print(message_3)
+#3-6
+print("3-6") 
+print("I found a bigger table.")
+guest.insert(0, 'Bob the Builder')
+guest.insert(3, 'General Kenobi')
+guest.append('IG-11')
+message_1 = f"{guest[0]}, you are invited to dinner."
+message_2 = f"{guest[1]}, you are invited to dinner."
+message_3 = f"{guest[2]}, you are invited to dinner."
+message_4 = f"{guest[3]}, you are invited to dinner."
+message_5 = f"{guest[4]}, you are invited to dinner."
+message_6 = f"{guest[5]}, you are invited to dinner."
+print(message_1)
+print(message_2)
+print(message_3)
+print(message_4)
+print(message_5)
+print(message_6)
+#3-9
+print("3-9")
+guest_count = len(guest)
+guest__count = f"{guest_count} people are invited to dinner."
+print(guest__count)
