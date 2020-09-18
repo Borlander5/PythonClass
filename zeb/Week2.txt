@@ -2,27 +2,27 @@
 #########
 #EXERCISE 1: Fix the following to compile and print
 #########
-print("Hello, ')
+print("Hello,")
 
-	print('my name is "mike".')
+print('my name is "mike".')
 		
-		print" What is your name?"
+print("What is your name?")
 		
-	  prnt(" What is your favorite color?")
+print("pyWhat is your favorite color?")
 	  
- print(" Have you ever "flown" in an airplane? I have. It was fun.")
+print(" Have you ever 'flown' in an airplane? I have. It was fun.")
 
 #########
 #EXERCISE 2: Fix the following to compile and print
 #########
  
- word1 = My
- word2 = 'favorite '
- word3 = 'color "
- 4word = "is "
- word5 == "green"
+word1 = "My"
+word2 = 'favorite'
+word3 = 'color'
+word4 = "is"
+word5 = "green"
  
- sentance = [word1, word2, word3, 4word, word5, "."]
+sentance = [word1, word2, word3, word4, word5, "."]
 print(sentance)
  
 #########
@@ -30,17 +30,70 @@ print(sentance)
 #########
 
 value1 = 12345
-
+value_1 = f"{value1} is a integer."
+print(value_1)
 value2 = 123.45
-
+value_2 = f"{value2} is a float."
+print(value_2)
 value3 = "12345"
-
+value_3 = f"{value3} is a string."
+print(value_3)
 value4 = "123.45"
-
+value_4 = f"{value4} is a string."
+print(value_4)
 value5 = 'hello'
- 
+value_5 = f"{value5} is a string."
+print(value_5)
 
 #########
 #EXERCISE 4: Complete 5 of the 10 exercises in chapter 3. Place them below
 #########
+#1
+names = ['Mike', 'James', 'John']
+print(names[0])
+print(names[1])
+print(names[2])
+#2
+message = f"My names is {names[0]}"
+message1 = f"My names is {names[1]}"
+message2 = f"My names is {names[2]}"
+print(message)
+print(message1)
+print(message2)
+#4
+invites = ['Mike', 'James', 'John']
+mesage = f"{invites[0]}, you are invited to my party!"
+mesage1 = f"{invites[1]}, you are invited to my party!"
+mesage2 = f"{invites[2]}, you are invited to my party!"
+print(mesage)
+print(mesage1)
+print(mesage2)
+#5
 
+print("James can't come anymore. But Jeff can now make it!")
+del invites[2]
+invites.append('Jeff')
+mesage = f"{invites[0]}, you are invited to my party!"
+mesage1 = f"{invites[1]}, you are invited to my party!"
+mesage2 = f"{invites[2]}, you are invited to my party!"
+print(mesage)
+print(mesage1)
+print(mesage2)
+#6
+
+print("I now have a bigger table! Now George, Bob, and ABCDEFGHIJKLMNOPQRSTUVWXYZ can now make it!")
+invites.insert(0, 'George')
+invites.insert(2, 'Bob')
+invites.append('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+mesage = f"{invites[0]}, you are invited to my party!"
+mesage1 = f"{invites[1]}, you are invited to my party!"
+mesage3 = f"{invites[2]}, you are invited to my party!"
+mesage4 = f"{invites[3]}, you are invited to my party!"
+mesage5 = f"{invites[4]}, you are invited to my party!"
+mesage6 = f"{invites[5]}, you are invited to my party!"
+print(mesage)
+print(mesage1)
+print(mesage3)
+print(mesage4)
+print(mesage5)
+print(mesage6)
