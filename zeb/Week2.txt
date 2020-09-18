@@ -48,4 +48,52 @@ print(value_5)
 #########
 #EXERCISE 4: Complete 5 of the 10 exercises in chapter 3. Place them below
 #########
+#1
+names = ['Mike', 'James', 'John']
+print(names[0])
+print(names[1])
+print(names[2])
+#2
+message = f"My names is {names[0]}"
+message1 = f"My names is {names[1]}"
+message2 = f"My names is {names[2]}"
+print(message)
+print(message1)
+print(message2)
+#4
+invites = ['Mike', 'James', 'John']
+mesage = f"{invites[0]}, you are invited to my party!"
+mesage1 = f"{invites[1]}, you are invited to my party!"
+mesage2 = f"{invites[2]}, you are invited to my party!"
+print(mesage)
+print(mesage1)
+print(mesage2)
+#5
 
+print("James can't come anymore. But Jeff can now make it!")
+del invites[2]
+invites.append('Jeff')
+mesage = f"{invites[0]}, you are invited to my party!"
+mesage1 = f"{invites[1]}, you are invited to my party!"
+mesage2 = f"{invites[2]}, you are invited to my party!"
+print(mesage)
+print(mesage1)
+print(mesage2)
+#6
+
+print("I now have a bigger table! Now George, Bob, and ABCDEFGHIJKLMNOPQRSTUVWXYZ can now make it!")
+invites.insert(0, 'George')
+invites.insert(2, 'Bob')
+invites.append('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
+mesage = f"{invites[0]}, you are invited to my party!"
+mesage1 = f"{invites[1]}, you are invited to my party!"
+mesage3 = f"{invites[2]}, you are invited to my party!"
+mesage4 = f"{invites[3]}, you are invited to my party!"
+mesage5 = f"{invites[4]}, you are invited to my party!"
+mesage6 = f"{invites[5]}, you are invited to my party!"
+print(mesage)
+print(mesage1)
+print(mesage3)
+print(mesage4)
+print(mesage5)
+print(mesage6)
