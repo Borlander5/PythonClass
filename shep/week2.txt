@@ -2,45 +2,56 @@
 #########
 #EXERCISE 1: Fix the following to compile and print
 #########
-print("Hello, ')
+print("Hello, ")
 
-	print('my name is "mike".')
+print('my name is "mike"')
 		
-		print" What is your name?"
+print(" What is your name?")
 		
-	  prnt(" What is your favorite color?")
+print(" What is your favorite color?")
 	  
- print(" Have you ever "flown" in an airplane? I have. It was fun.")
+print(" Have you ever 'flown' in an airplane? I have. It was fun.")
 
 #########
 #EXERCISE 2: Fix the following to compile and print
 #########
  
- word1 = My
- word2 = 'favorite '
- word3 = 'color "
- 4word = "is "
- word5 == "green"
+word1 = "My"
+word2 = "favorite"
+word3 = "color"
+word4 = "is"
+word5 = "green"
  
- sentance = [word1, word2, word3, 4word, word5, "."]
-print(sentance)
+sentence = [word1, word2, word3, word4, word5]
+print(sentence)
  
 #########
 #EXERCISE 3: Add a print line below each variable printing out the type of variable 
 #########
 
 value1 = 12345
-
+print(value1)
 value2 = 123.45
-
+print(value2)
 value3 = "12345"
-
+print(value3)
 value4 = "123.45"
-
+print(value4)
 value5 = 'hello'
- 
+print(value5)
 
 #########
 #EXERCISE 4: Complete 5 of the 10 exercises in chapter 3. Place them below
-#########
+#########  
+#3-1.
+names = ['zeb', ' nehemiah', ' hooper',]
+print(names[0])
+print(names[1].title())
+print(names[2])
+#3-2.
+bicycles = ['trek', 'cannondale', 'redline', 'specialized']
+print(bicycles)
+message = f"My bicycle was a {bicycles[0]}"
 
+print(message)
+cd
