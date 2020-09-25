@@ -1,0 +1,21 @@
+#qwerty = "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+#qwertyu = "##############################"
+#print(qwerty + qwertyu)
+
+
+
+#print(20*'!')
+#print(20*'^')
+
+#for zeb in range(1, 1001):
+#	for zeb1 in range(0, 21):	
+#		print(zeb1*'|' + (20-zeb1)*'/')
+#	for zeb1 in range(0, 21):
+#		print(zeb1*'/' + (20-zeb1)*'|')
+
+for jeff in range(1, 1000000000000000000000000000000000000001):
+	for jeff1 in range(0, 21):
+		print(jeff1*' ' + jeff*'@')
+	for jeff1 in range(1, 21):
+		print((20-jeff1)*' ' + jeff*'@')
+	
