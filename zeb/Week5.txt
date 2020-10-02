@@ -1,0 +1,10 @@
+for a in "b":
+  print(a)
+  for b in "r":
+    print(b)
+    for c in "a":
+      print(c)
+      for d in "i":
+        print(d)
+        for e in "n":
+          print(e)

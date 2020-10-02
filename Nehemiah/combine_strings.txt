@@ -1,0 +1,25 @@
+#f = "-"
+#s = "|"
+
+#alpha = list(range(1200))
+#for twenty in alpha:
+	#beta = list(range(60))
+	#for twenty1 in beta:
+		#deta = list(range(59))
+		#for twenty2 in deta:
+			#print(f*twenty2+s*(59-twenty2))
+		#for twenty2 in deta:
+			#print(f*(59-twenty2)+s*twenty2)
+		
+f = "-"
+s = " "
+alpha = list(range(2))
+for twenty in alpha:
+	beta = list(range(20))
+	for twenty1 in beta:
+		delta = list(range(19))
+		for twenty2 in delta:
+			print(s*(19-twenty2)+f*twenty1)
+		for twenty2 in delta:
+			print(s*twenty2+f*twenty1)
+		
