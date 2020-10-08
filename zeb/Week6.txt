@@ -1,0 +1,33 @@
+#5-1
+car = 'sabaru'
+print("Is car == 'sabaru'? I predict True.")
+print(car == 'sabaru')
+print("\nIs car == 'ford'? I predict False.")
+print(car == 'ford')
+print("\nIs car == 'chevy'? I predict False.")
+print(car == 'chevy')
+print("\nIs car == 'audi'? I predict False.")
+print(car == 'audi')
+print("\nIs car == 'ram'? I predict False.")
+print(car == 'ram')
+print("\nIs car == 'lincoln'? I predict False.")
+print(car == 'lincoln')
+print("\nIs car == 'Mercedes'? I predict False.")
+print(car == 'mercedes')
+print("\nIs car == 'lambo'? I predict False.")
+print(car == 'lambo')
+print("\nIs car == 'mustang'? I predict False.")
+print(car == 'mustang')
+print("\nIs car == 'suv'? I predict False.")
+print(car == 'suv')
+
+#5-3
+alien_colors = ['green', 'red', 'yellow']
+
+if 'green' in alien_colors:
+	print("You got 5 points")
+if 'red' in alien_colors:
+	print("You got 2.5 point")
+if 'purple' in  alien_colors:
+	print("You Lost")
+print("\nGame over")
