@@ -1,0 +1,68 @@
+magicians = ['alice', 'david', 'caroline']
+for magician in magicians:
+    print(f"{magician.title()}, that was a great trick!")
+    print(f"I can't wait to see your next trick, {magician.title()}.\n")
+
+    print("Thank you, everyone. That was a great magic show!")
+
+#4-1.
+
+pizzas = ['pepperoni', 'cheese', 'sausage']
+for pizza in pizzas:
+    print(f"{pizza.title()} is my favorite type of pizza.")
+
+print("Pizza is my favorite food!")
+
+#4-2.
+
+animals = ['lions', 'tigers', 'snakes', 'elephants']
+for animal in animals:
+    print(f"{animal.title()} are my favorite to see at the zoo.")
+
+print("I love these animals!")
+
+
+
+
+squares = []
+for value in range(1, 11):
+    squares.append(value** 2)
+
+print(squares)
+
+#4-4.
+numbers = list(range(1, 1000001))
+print(numbers)
+
+#4-6.
+odd_numbers = list(range(1, 20, 2))
+print(odd_numbers)
+#4-10.
+
+my_foods = ['pizza', 'falafel', 'carrot cake', 'steak','pasta']
+friend_foods = my_foods
+
+my_foods.append('cannoli')
+friend_foods.append('ice cream')
+
+print("My favorite foods are:")
+print(my_foods)
+
+print("The last three items from the list are:")
+print(my_foods[2:5])
+
+
+
+
+dimensions = (200, 50)
+print("Original dimensions:")
+for dimension in dimensions:
+    print(dimension)
+
+dimensions = (400, 100)
+print("\nModified dimensions:")
+for dimension in dimensions:
+    print(dimension)
+
+#4-14.
+
