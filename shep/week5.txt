@@ -1,0 +1,143 @@
+
+requested_topping = 'mushrooms'
+
+if requested_topping != 'anchovies':
+    print("Hold the anchovies")
+
+
+
+
+answer = 17
+
+if answer != 42:
+    print("That is not the correct answer. Please try again!")
+
+
+car  = 'audi'
+print(car == 'bmw')
+
+
+banned_users = ['andrew', 'carolina', 'david']
+user = 'marie'
+
+if user not in banned_users:
+    print(f"{user.title()}, you can post a response if you wish.")
+
+
+
+game_active = True
+can_edit = False
+
+#5-1.
+#1
+pizza = 'pepperoni'
+print("Is pizza == 'pepperoni'? I predict true.")
+print(pizza == 'pepperoni')
+
+print("\nIs pizza == 'cheese'? I predict False.")
+print(pizza == 'cheese')
+
+#2
+show = 'office'
+print("Is show == 'office'? I predict True.")
+print(show == 'office')
+
+print("\nIs show == 'friends'? I predict false.")
+print(show == 'friends')
+
+#3
+game = 'basketball'
+print("Is game == 'basketball'? I predict true.")
+print(game == 'basketball')
+
+print("\nIs game == 'soccer'? I predict false.")
+print(game == 'soccer')
+
+#4
+pet = 'dog'
+print("Is pet == 'dog'? I predict true.")
+print(pet == 'dog')
+
+print("\nIs pet == ' cat'? I predict false.")
+print(pet == 'cat')
+
+#5
+book = 'hobbit'
+print("Is book == 'hobbit'? I predict true.")
+print(book == 'hobbit')
+
+print("\nIs book == 'jaws'? I predict false.")
+print(book == 'jaws')
+
+
+
+age = 17
+if age >= 18:
+    print("You are old enough to vote!")
+    print("Have you registered to vote yet?")
+else:
+    print("Sorry, you are too young to vote.")
+    print("Please register to vote as soon as you turn 18!")
+
+
+
+#5-3.
+alien_colors = ['green', 'yellow', 'red']
+
+if 'green' in alien_colors:
+    print("You win 5 points")
+if 'red' in alien_colors:
+    print("You win 4 points")
+if 'yellow' in alien_colors:
+    print("Game Over")
+print("\nYou lost")
+
+#5-4.
+alien_colors = ['green', 'yellow', 'red']
+
+if 'green' in alien_colors:
+    print("You win 5 points for shooting the alien.")
+if 'yellow' and 'red' in alien_colors:
+    print("You win 10 points")
+
+alien_colors = ['green', 'yellow', 'red']
+
+if 'green' in alien_colors:
+    print("You win 5 points for shooting the alien.")
+else:
+    alien_colors = 'yellow' and 'red'
+
+print(f"You win 10 points.")
+
+#5-5.
+favorite_fruits = ['apple', 'grapes', 'oranges']
+
+if 'apple' in favorite_fruits:
+    print("I love apples!")
+if 'grapes' in favorite_fruits:
+    print("I love grapes!")
+if 'oranges' in favorite_fruits:
+    print("I love oranges!")
+if 'apple' and 'oranges' in favorite_fruits:
+    print(" I love comparing these fruits.")
+if 'apple' and 'grapes' and 'oranges' in favorite_fruits:
+    print("I love their juice.")
+
+#5-8.
+usernames = ['jim', 'michael', 'dwight', 'kevin', 'admin']
+if 'admin' in usernames:
+    print("Hello, admin. Would you like to see a status report?")
+if 'jim' and 'michael' and 'dwight' and 'kevin' in usernames:
+   print("Hello, Welcome Back!")
+
+
+
+
+title1 = 5
+title2 = 5
+title3 = 5
+if title1 + 1 == title2 and title2 + 1 == title3 or title1 == title2 and title2 == title3:
+
+    print("Yes")
+else:
+    print("No")
