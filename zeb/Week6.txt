@@ -31,3 +31,30 @@ if 'red' in alien_colors:
 if 'purple' in  alien_colors:
 	print("You Lost")
 print("\nGame over")
+
+#5-4
+if 'green' in alien_colors:
+	print("\nYou got 5 points")
+else:
+	print("You got 10 points")
+
+#5-5
+if 'green' in alien_colors:
+	print("\nYou got 5 points")
+elif 'yellow' in alien_colors:
+	print("You got 10 points")
+elif 'red' in alien_colors:
+	print("You got 15 points")
+#5-7
+favorite_gruits = ['banannas', 'apples', 'oranges']
+if 'grapes' in favorite_gruits:
+	print("You really like grapes")
+elif 'apples' in favorite_gruits:
+	print("You really like apples")
+elif 'dates' in favorite_gruits:
+	print("You really like dates")
+elif 'oranges' in favorite_gruits:
+	print("You really like dates")
+	
+
+
