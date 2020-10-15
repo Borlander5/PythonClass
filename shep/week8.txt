@@ -1,0 +1,92 @@
+alien_0 = {'x_position': 0, 'y_position': 25, 'speed': 'medium'}
+print(f"Original position: {alien_0['x_position']}")
+
+# Move the alien to the right.
+# Determine how far to move the alien based on its current speed.
+if alien_0['speed'] == 'slow':
+    x_increment = 1
+elif alien_0['speed'] == 'medium':
+    x_increment = 2
+else:
+    # This must be a fast alien.
+    x_increment = 3
+
+
+# The new position is the old position plus the increment. 
+alien_0['x_position'] = alien_0['x_position'] + x_increment
+
+print(f"New position: {alien_0['x_position']}")
+
+
+
+
+alien_0 = {'color': 'green', 'points': 5}
+print(alien_0)
+
+
+del alien_0['points']
+print(alien_0)
+
+
+
+
+favorite_languages = {
+    'jen': 'python',
+    'sarah': 'c',
+    'edward': 'ruby',
+    'phil': 'python',
+    }
+
+language = favorite_languages['sarah'].title()
+print(f"Sarah's favorite language is {language}.")
+favorite_languages['sarah']
+
+
+
+alien_0 = {'color': 'green', 'speed': 'slow'}
+
+
+point_value = alien_0.get('points', 'No point value assigned.')
+print(point_value)
+
+
+
+
+#6-1.
+person_0 = {'first_name': 'Tate', 'last_name':'Weldy', 'age': '9','city': 'Louisville'}
+print(person_0['first_name'])
+print(person_0['last_name'])
+print(person_0['age'])
+print(person_0['city'])
+
+
+
+
+#6-2.
+favorite_numbers = {
+    'Mom': '7',
+    'Annie': '15',
+    'G.K.': '2',
+    'Colt': '9',
+    'Tate': '0',
+    }
+
+number = favorite_numbers['Mom'].title()
+print(f"Mom's favorite number is {number}.")
+favorite_numbers['Mom']
+
+number = favorite_numbers['Annie'].title()
+print(f"Annie's favorite number is {number}.")
+favorite_numbers['Annie']
+
+number = favorite_numbers['G.K.'].title()
+print(f"G.K.'s favorite number is {number}.")
+favorite_numbers['G.K.']
+
+number = favorite_numbers['Colt'].title()
+print(f"Colt's favorite number is {number}.")
+favorite_numbers['Colt']
+
+number = favorite_numbers['Tate'].title()
+print(f"Tate's favorite number is {number}.")
+favorite_numbers['Tate']
