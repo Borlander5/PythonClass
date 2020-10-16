@@ -37,9 +37,8 @@ favorite_languages = {
     'phil': 'python',
     }
 
-language = favorite_languages['sarah'].title()
-print(f"Sarah's favorite language is {language}.")
-favorite_languages['sarah']
+for name in favorite_languages.keys():
+    print(name.title())
 
 
 
@@ -90,3 +89,152 @@ favorite_numbers['Colt']
 number = favorite_numbers['Tate'].title()
 print(f"Tate's favorite number is {number}.")
 favorite_numbers['Tate']
+
+
+favorite_languages = {
+    'jen': 'python',
+    'sarah': 'c',
+    'edward': 'ruby',
+    'phil': 'python',
+    }
+
+
+print("The following languages have been mentioned:")
+for language in favorite_languages.values():
+    print(language.title())
+
+
+
+
+
+#6-5.
+river_locations = {
+    'nile': 'egypt',
+    'mississippi': 'america',
+    'amazon': 'brazil',
+    }
+
+location = river_locations['nile'].title()
+print(f"The Nile runs through {location}.")
+river_locations['nile']
+
+
+
+location = river_locations['mississippi'].title()
+print(f"The Mississippi runs through {location}.")
+river_locations['mississippi']
+
+
+
+location = river_locations['amazon'].title()
+print(f"The Amazon runs through {location}.")
+river_locations['amazon']
+
+
+river_locations = {
+    'nile': 'egypt',
+    'mississippi': 'america',
+    'amazon': 'brazil',
+    }
+
+
+for name in river_locations.keys():
+    print(name.title())
+
+river_locations = {
+    'nile': 'egypt',
+    'mississippi': 'america',
+    'amazon': 'brazil',
+    }
+
+for location in set(river_locations.values()):
+    print(location.title())
+
+# Store information about a pizza being ordered.
+pizza = {
+    'crust': 'thick',
+    'toppings': ['mushrooms', 'extra cheese'],
+    }
+#Summarize the order.
+print(f"You ordered a {pizza['crust']}-crust pizza "
+    "with the following toppings:")
+
+for topping in pizza['toppings']:
+    print(f"\t{topping}")
+
+
+
+favorite_languages = {
+    'jen': ['python', 'ruby'], 
+    'sarah': ['c'],
+    'edward': ['ruby', 'go'],
+    'phil': ['python', 'haskell'],
+    }
+
+for name, languages in favorite_languages.items():
+    print(f"\n{name.title()}'s favorite languages are:")
+    for language in languages:
+        print(f"\t{language.title()}")
+
+
+
+users = {
+    'aeinstein': {
+        'first': 'albert',
+        'last': 'einstein',
+        'location': 'princton',
+        },
+
+    'mcurie': {
+        'first':  'marie',
+        'last': 'curie',
+        'location': 'paris',
+        },
+
+
+    }
+
+
+for username, user_info in users.items():
+    print(f"\nUsername: {username}")
+    full_name = f"{user_info['first']} {user_info['last']}"
+    location = user_info['location']
+
+    print(f"\tFull name: {full_name.title()}")
+    print(f"\tLocation: {location.title()}")
+
+
+#6-9.
+
+favorite_places = {
+    'Shep': ['Florida', 'Alabama'],
+    'Hooper': ['Tennessee', 'Alaska'],
+    'Nolan': ['Ohio', 'South Carolina'],
+    }
+
+for name, places in favorite_places.items():
+    print(f"\n{name.title()}'s favorite places are:")
+    for place in places:
+        print(f"\t{place.title()}")
+
+ 
+
+#6-10.
+
+favorite_numbers = {
+    'Mom': ['seven', 'thirty-nine'],
+    'Annie': ['fifteen', 'thirteen'],
+    'G.K.': ['two', 'six'],
+    'Colt': ['nine', 'eleven'],
+    'Tate': ['zero', 'eight'],
+    }    
+
+for name, numbers in favorite_numbers.items():
+    print(f"\n{name.title()}'s favorite numbers are:")
+    for number in numbers:
+        print(f"\t{number.title()}")     
+
+
+
+
+           
