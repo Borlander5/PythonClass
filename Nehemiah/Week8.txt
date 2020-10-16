@@ -1,5 +1,5 @@
-friend = {'name' : 'Atheon', 'city' : 'Orlinton', 'status' : 'king'}
-print(f"{friend['name']} is from {friend['city']}, he is the {friend['status']} there.")
+friend = {'name' : 'Nehemaih', 'city' : 'Atascadero', 'last_name' : 'Borland'}
+print(f"{friend['name']} {friend['last_name']} is from {friend['city']}.")
 
 friend_number = {'Shep' : '1', 'Ethan' : '2', 'Hopper' : '3', 'Everybody' : '4', 'Nobody' : '-23581571384957128394725098575158903'}
 print(f"Shep's fravorite number is {friend_number['Shep']}. Ethan's favorite number is {friend_number['Ethan']}. Hopper's favorite number is {friend_number['Hopper']}. Everybody's fravorite number is {friend_number['Everybody']}. Nobody's favorite number is {friend_number['Nobody']}.")
@@ -10,6 +10,61 @@ rivers = {
 	'Ohio' : 'America'
 	}
 for name, loc in rivers.items():
-	print(f"{name} is in {loc}.")
+	print(f"The {name} river is in {loc}.")
 	print(name)
 	print(loc)
+
+people = {
+	'me' : {
+		'name' : 'Nehemaih', 
+		'city' : 'Atascadero',
+		'last_name' : 'Borland',
+		},
+	'friend_1' : {
+		'name' : 'Bob',
+		'city' : 'San Fransisco',
+		'last_name' : 'What',
+		},
+	'friend_2' : {
+		'name' : 'Billy',
+		'city' : 'New York',
+		'last_name' : 'NOOOOOO',
+		}
+	}
+for who, info in people.items():
+	full_name = f"{info['name']} {info['last_name']}"
+	loc = info['city']
+	print(f"{full_name.title()} is from {loc.title()}.")
+
+friend_number = {
+	'shep' : {
+		'1st' : '5710',
+		'2nd' : '26346234',
+		'3rd' : '2630',
+		},
+	'ethan' : {
+		'1st' : '7134968',
+		'2nd' : '1047856',
+		'3rd' : '15',
+		},
+	'hopper' : {
+		'1st' : '17690',
+		'2nd' : '25734',
+		'3rd' : '276',
+		},
+	'everybody' : {
+		'1st' : '17690',
+		'2nd' : '25734',
+		'3rd' : '276',
+		}, 
+	'nobody' : {
+		'1st' : '-23581571384957128394725098575158903',
+		'2nd' : '34028976209867129348706871943610764018',
+		'3rd' : '-1',
+		},
+	}
+
+for who, info in friend_number.items():
+	fav_num = f"{info['1st']}, {info['2nd']}, and {info['3rd']}"
+	print(f"{who.title()}'s favorite numbers are {fav_num}.")
+
