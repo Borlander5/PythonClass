@@ -1,0 +1,15 @@
+friend = {'name' : 'Atheon', 'city' : 'Orlinton', 'status' : 'king'}
+print(f"{friend['name']} is from {friend['city']}, he is the {friend['status']} there.")
+
+friend_number = {'Shep' : '1', 'Ethan' : '2', 'Hopper' : '3', 'Everybody' : '4', 'Nobody' : '-23581571384957128394725098575158903'}
+print(f"Shep's fravorite number is {friend_number['Shep']}. Ethan's favorite number is {friend_number['Ethan']}. Hopper's favorite number is {friend_number['Hopper']}. Everybody's fravorite number is {friend_number['Everybody']}. Nobody's favorite number is {friend_number['Nobody']}.")
+
+rivers = {
+	'Mississippi' : 'America',
+	'Colorado' : 'America',
+	'Ohio' : 'America'
+	}
+for name, loc in rivers.items():
+	print(f"{name} is in {loc}.")
+	print(name)
+	print(loc)
