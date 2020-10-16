@@ -1,0 +1,76 @@
+#6-1
+Boaz = {'first_name': 'Boaz', 'last_name': 'Borland', 'age': 4, 'city': 'Louisville'}
+print(Boaz)
+
+#6-2
+favorite_numbers = {
+	'Shep': 23, 
+	'Boaz': 2, 
+	'Nehemiah': 47, 
+	'Mike': 40, 
+	'Lola': 13,
+	}
+language = favorite_numbers['Shep']
+print(f"Sheps's favorite number is {language}")
+language1 = favorite_numbers['Boaz']
+print(f"Boaz's favorite number is {language1}")
+language2 = favorite_numbers['Nehemiah']
+print(f"Nehemiah's favorite number is {language2}")
+language3 = favorite_numbers['Mike']
+print(f"Mike's favorite number is {language3}")
+language4 = favorite_numbers['Lola']
+print(f"Lola's favorite number is {language4}")
+
+#6-3
+glossary_0 = {
+	'print()': 'prints what ever your parameter is', 
+	'git status': 'sees what needs to saved to the cloud', 
+	'git commit': 'Commits what you saved to pushing it to the cloud', 
+	'git push': 'Pushes what you commited to the cloud', 
+	'git pull': 'Updates you local repository with the cloud repository'
+	}
+values = glossary_0['print()']
+print(f"Print(): \n{values}")
+values1 = glossary_0['git status']
+print(f"Git status: \n{values1}")
+values2 = glossary_0['git commit']
+print(f"Git commit: \n{values2}")
+values3 = glossary_0['git push']
+print(f"Git push: \n{values3}")
+values4 = glossary_0['git pull']
+print(f"Git pull: \n{values4}")
+
+#6-4
+glossary_1 = {
+	'print()': 'prints what ever your parameter is', 
+	'git status': 'sees what needs to saved to the cloud', 
+	'git commit': 'Commits what you saved to pushing it to the cloud', 
+	'git push': 'Pushes what you commited to the cloud', 
+	'git pull': 'Updates you local repository with the cloud repository',
+	'if else loop': 'A type of loop that has two answers',
+	'git add': 'Adds a file to staging',
+	'for loops': 'A command that loops thru a list or dictionary',
+	'title.()': 'Makes the first letter capital',
+	'upper.()': 'Makes all letters capital'
+	}
+for command, meaning in glossary_1.items():
+	print(f"\nCommand: {command}")
+	print(f"Meaning: {meaning}")
+
+#6-5
+favorite_languages = {
+	'Shep': 'English', 
+	'Boaz': 'Not Answered', 
+	'Nehemiah': 'LOTR Elvish', 
+	'Mike': 'Ernest', 
+	'Lola': 'Not Answered'
+	}
+answered = ['Shep', 'Nehemiah', 'Mike']
+for name in favorite_languages.keys():
+	print(f"Hi {name.title()}.")
+
+	if name in answered:
+		language = favorite_languages[name].title()
+		print(f"\t{name.title()}, I see you love {language}!")
+	if name not in answered:
+		print(f"\t{name.title()}, please finish the survey.")

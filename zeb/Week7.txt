@@ -1,0 +1,7 @@
+tile_1 = 5
+tile_2 = 5
+tile_3 = 5
+if (tile_1 == (tile_2 - 1) or tile_1 == (tile_2)) and (tile_2 == (tile_3 - 1) or tile_2 == (tile_3)):
+	print("Yes")
+else:
+	print("No")

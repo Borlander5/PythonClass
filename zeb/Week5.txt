@@ -1,7 +1,10 @@
-for x in "My":
-  print(x)
-  for a in "favorite":
-    print(a)
-    for b in "fruit":
-      print(b)
-			
+for a in "b":
+  print(a)
+  for b in "r":
+    print(b)
+    for c in "a":
+      print(c)
+      for d in "i":
+        print(d)
+        for e in "n":
+          print(e)
