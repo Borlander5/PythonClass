@@ -39,3 +39,38 @@ values3 = glossary_0['git push']
 print(f"Git push: \n{values3}")
 values4 = glossary_0['git pull']
 print(f"Git pull: \n{values4}")
+
+#6-4
+glossary_1 = {
+	'print()': 'prints what ever your parameter is', 
+	'git status': 'sees what needs to saved to the cloud', 
+	'git commit': 'Commits what you saved to pushing it to the cloud', 
+	'git push': 'Pushes what you commited to the cloud', 
+	'git pull': 'Updates you local repository with the cloud repository',
+	'if else loop': 'A type of loop that has two answers',
+	'git add': 'Adds a file to staging',
+	'for loops': 'A command that loops thru a list or dictionary',
+	'title.()': 'Makes the first letter capital',
+	'upper.()': 'Makes all letters capital'
+	}
+for command, meaning in glossary_1.items():
+	print(f"\nCommand: {command}")
+	print(f"Meaning: {meaning}")
+
+#6-5
+favorite_languages = {
+	'Shep': 'English', 
+	'Boaz': 'Not Answered', 
+	'Nehemiah': 'LOTR Elvish', 
+	'Mike': 'Ernest', 
+	'Lola': 'Not Answered'
+	}
+answered = ['Shep', 'Nehemiah', 'Mike']
+for name in favorite_languages.keys():
+	print(f"Hi {name.title()}.")
+
+	if name in answered:
+		language = favorite_languages[name].title()
+		print(f"\t{name.title()}, I see you love {language}!")
+	if name not in answered:
+		print(f"\t{name.title()}, please finish the survey.")
