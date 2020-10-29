@@ -1,0 +1,21 @@
+#7-1
+cartype = input("What kind of rental car would you like: ")
+print(f"\nLet me see if I can find a {cartype}.")
+
+#7-2
+seats = input(f"\nHow many guests are in your party? ")
+seats = int(seats)
+
+if seats > 8:
+	print(f"\nPlease wait for a table")
+else:
+	print(f"\nYour table is ready")
+
+#7-3
+number = input(f"\nPlease insert a number and we will tell you if it is a multiple of ten ")
+number = int(number)
+
+if number % 10 == 0:
+	print(f"\nThe number {number} is even.")
+else:
+	print(f"\nThe number {number} is odd.")
