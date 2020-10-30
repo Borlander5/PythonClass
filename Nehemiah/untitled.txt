@@ -1,0 +1,7 @@
+tile1 = 1
+tile2 = 2
+tile3 = 3
+if (tile1 + 1 == tile2 and tile2 + 1 == tile3) or (tile1 == tile2 and tile2 == tile3):
+	print("Yes Sir")
+else: 
+	print("Nope")

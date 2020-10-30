@@ -1,0 +1,83 @@
+print('5-1')
+#1
+car = 'x-wing'
+print("Is car == 'x-wing'? I predict True.")
+print(car == 'x-wing')
+#2
+car = 'tie-fighter'
+print("\nIs car == 'tie-interceptor'? I predict False.")
+print(car == 'tie-interceptor')
+#3
+car = 'u-wing'
+print("Is car == 'u-wing'? I predict True.")
+print(car == 'u-wing')
+#4
+car = 'y-wing'
+print("\nIs car == 'a-wing'? I predict False.")
+print(car == 'a-wing')
+#5
+car = 'tie-interceptor'
+print("Is car == 'tie-interceptor'? I predict True.")
+print(car == 'tie-interceptor')
+#6
+car = 'tie-phantom'
+print("\nIs car == 'tie-bomber'? I predict False.")
+print(car == 'tie-bomber')
+#7
+car = 'y-wing'
+print("Is car == 'y-wing'? I predict True.")
+print(car == 'y-wing')
+#8
+car = 'tie-bomber'
+print("\nIs car == 'tie-defender'? I predict False.")
+print(car == 'tie-defender')
+#9
+car = 'x-wing'
+print("Is car == 'a-wing'? I predict True.")
+print(car == 'a-wing')
+#10
+car = 'tie-striker'
+print("\nIs car == 'tie-dagger'? I predict False.")
+print(car == 'tie-dagger')
+
+print('5-3')
+alien_color = 'green'
+if alien_color == 'green':
+	print("YOU HAVE EARNED 5 POINTS.")
+
+alien_color = 'red'
+if alien_color == 'red':
+	print(" ")
+print('5-4')
+alien_color = 'green'
+if alien_color == 'green':
+	print("YOU HAVE EARNED 5 POINTS.")
+else:
+	print("YOU HAVE EARNED 10 POINTS.")
+alien_color = 'red'
+if alien_color == 'green':
+	print("YOU HAVE EARNED 5 POINTS.")
+else:
+	print("YOU HAVE EARNED 10 POINTS.")
+
+print('5-5')
+alien_color = 'yellow'
+if alien_color == 'green':
+	print("YOU HAVE EARNED 5 POINTS.")
+elif alien_color == 'yellow':
+	print("YOU HAVE EARNED 10 POINTS.")
+else:
+	print("YOU HAVE EARNED 15 POINTS.")
+	
+print('5-7')
+favor_fruit = ['banana', 'watermelon', 'pineapple']
+if 'watermelon' in favor_fruit:
+	print("I like Watermelon.")
+if 'eggnog' not in favor_fruit:
+	print("Eggnog is not a fruit.")
+if 'banana' in favor_fruit:
+	print("I like Bananas.")
+if 'cheese' not in favor_fruit:
+	print("Cheese is not a fruit.")
+if 'pineapple' in favor_fruit:
+	print("I like Pineapple.")
