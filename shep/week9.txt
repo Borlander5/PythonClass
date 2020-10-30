@@ -1,55 +1,4 @@
-pizza_salad = {
-    'pizza': {
-        'crust': 'thin',
-        'toppings': ['pepperoni', 'extra cheese', 'sausage'],
-        'size': 'large',
-        'temperature': 'hot',
-        },
 
-    'salad': {
-        'type': 'caeasar',
-        'dressing': 'none',
-        'croutons': 'homemade',
-        'weight': '3 tons',
-        }
-}
-
-
-print(f"Your pizza order has {pizza_salad['pizza']['crust']} crust.") 
-
-
-
-
-
-
-
-
-prompt = "If you tell us who you are, we can personalize the messages you see."
-prompt += "\nWhat is your name? "
-
-name = input(prompt)
-print(f"\nHello, {name}!")
-
-
-
-height = input("How tall are you, in inches? ")
-height = int(height)
-
-if height >= 48:
-    print("\nYou're tall enough to ride!")
-else:
-    print("\nSorry, you're still too short to ride.") 
-
-
-
-number = input("Enter a number, and I'll tell you if it's even or odd: ")
-number = int(number)
-
-
-if number % 2 == 0:
-    print(f"\nThe number {number} is even.")
-else:
-    print(f"\nThe number {number} is odd.")
 
 
 
@@ -137,16 +86,9 @@ while active:
 
 
 #7-7.
-
-
-
-pets = ['dog', 'cat', 'dog', 'goldfish', 'cat', 'rabbit', 'cat']
-print(pets)
-
-while 'cat' in pets:
-    pets.remove('cat')
-
-print(pets)
+x = 1 
+while x <= 5:
+    print(x)
 
 
 
@@ -155,30 +97,10 @@ print(pets)
 
 
 
-responses = {}
-
-#Set a flag to indicate that polling is active.
-polling_active = True
-
-while polling_active:
-    # Prompt for the person's name and response.
-    name = input("\nWhat is your name? ")
-    response = input("Which mountain would you like to climb someday? ")
-    
-
-    # Store the response in the dictionary.
-    responses[name] = response
 
 
-    # Find out if anyone else is going to take the poll.
-    repeat = input("Would you like to let another person respond? (yes/ no) ")
-    if repeat == 'no':
-        polling_active = False
 
-# Polling is complete. Show the results.
-print("n--- Poll Results ---")
-for name, response in responses.items():
-    print(f"{name} would like to climb {response}.")
+
 
 
 
