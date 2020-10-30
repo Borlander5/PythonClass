@@ -1,0 +1,155 @@
+
+
+
+
+#7-1.
+message = input("Tell me what type of rental car you would like: ")
+print(f"\nLet me see if we have a {message}!")
+
+
+#7-2.
+number = input("How many are in your dinner group?: ")
+number = int(number)
+
+
+if number >8:
+    print("\nSorry, you'll have to wait on a table.")
+else:
+    print("\nYou're table is ready!.")
+
+
+
+#7-3.
+number = input("Enter a number, and I'll tell you if it's a multiple of 10 or not: ")
+number = int(number)
+
+
+if number % 10 == 0:
+    print(f"\nThe number {number} is a multiple of 10!")
+else:
+    print(f"\nThe number {number} is not a multiple of 10.")
+
+
+
+
+
+
+
+
+
+
+#7-4.
+prompt = "\nPlease enter your pizza toppings:"
+prompt += "\n(Enter 'quit' when you are done.) "
+
+
+while True:
+    toppings = input(prompt)
+
+    
+    if toppings == 'quit':
+        break
+    else:
+        print(f"I will add {toppings.title()} to your pizza!")
+
+
+
+#7-5.
+age = input("How old are you? ")
+age = int(age)
+
+
+if age <= 3:
+    print("\nYour ticket is free!")
+elif age <= 12:
+    print("\nYour ticket is $10.")
+else:
+    print("\nYour ticket is $15.")
+
+
+
+
+
+
+#7-6.
+prompt = "\nPlease enter your pizza toppings:"
+prompt += "\nEnter 'quit' to end the program. "
+active = True
+while active:
+    toppings = input(prompt)
+
+    if toppings == 'quit':
+        break
+    else:
+        print(f"I will add {toppings.title()} to your pizza!")
+
+
+
+#7-7.
+x = 1 
+while x <= 5:
+    print(x)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#7-8.
+sandwich_orders = ['ham', 'turkey', 'cuban']
+finished_sandwiches = []
+
+
+while sandwich_orders:
+    current_sandwich = sandwich_orders.pop()
+
+    print(f"Verifying order: {current_sandwich.title()}")
+    finished_sandwiches.append(current_sandwich)
+
+
+print("\nThe following orders have been completed:")
+for finished_sandwich in finished_sandwiches:
+    print(finished_sandwich.title())
+
+
+
+
+
+#7-9.
+sandwiches = ['turkey', 'ham', 'pastrami', 'ham', 'pastrami', 'turkey']
+print(sandwiches)
+print("We have run out of pastrami. Is there any thing else you want?")
+
+while 'pastrami' in sandwiches:
+    sandwiches.remove('pastrami')
+
+print(sandwiches)
+
+
+
+#7-10.
+responses = {}
+
+polling_active = True
+
+while polling_active:
+    name = input("\nWhat is your name? ")
+    response = input("If you could go anywhere in the world, where would you go? ")
+    responses[name] = response
+
+    repeat = input("Would you like to let another person respond? (yes/ no) ")
+    if repeat == 'no':
+        polling_active = False
+
+print("\n--- Poll Results ---")
+for name, response in responses.items():
+    print(f"{name} would like to travel to {response}.")

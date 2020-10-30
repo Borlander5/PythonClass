@@ -1,0 +1,104 @@
+"""
+#7-1
+cartype = input("What kind of rental car would you like: ")
+print(f"\nLet me see if I can find a {cartype}.")
+
+#7-2
+seats = input(f"\nHow many guests are in your party? ")
+seats = int(seats)
+
+if seats > 8:
+	print(f"\nPlease wait for a table")
+else:
+	print(f"\nYour table is ready")
+
+#7-3
+number = input(f"\nPlease insert a number and we will tell you if it is a multiple of ten: ")
+number = int(number)
+
+if number % 10 == 0:
+	print(f"\nThe number {number} is a multiple of 10.")
+else:
+	print(f"\nThe number {number} is not a multiple of 10.")
+
+#7-4
+
+prompt = "\nPlease list your pizza toppings: "
+prompt += "\n(Enter 'quit' when you are finished.) "
+
+while True:
+	toppings = input(prompt)
+
+	if toppings == 'quit':
+		break
+	else:
+		print(f"\nWe will add {toppings.title()}.")
+
+#7-5
+prompt = "\nPlease type in your age: "
+age = input(prompt)
+age = int(age)
+if age < 3:
+	print("Your ticket is free")
+elif age <= 12:
+	print("Your ticket is $10")
+else:
+	print("Your ticket is $15")
+
+#7-6
+prompt = "\nPlease list your pizza toppings: "
+prompt += "\n(Enter 'quit' when you are finished.) "
+active = True
+while active:
+	toppings = input(prompt)
+
+	if toppings == 'quit':
+		break
+	else:
+		print(f"\nWe will add {toppings.title()}.")
+
+#7-7
+x = 1
+while x <=2:
+	print(x)
+
+
+#7-8
+sandwich_orders = ['turkey', 'ham', 'roast beef']
+finished_sandwiches = []
+
+while sandwich_orders:
+	current_order = sandwich_orders.pop()
+
+	print(f"Verifying order: {current_order.title()}")
+	finished_sandwiches.append(current_order)
+
+print("\nThe following orders have been completed:")
+for finished_sandwich in finished_sandwiches:
+	print(finished_sandwich.title())
+
+#7-9
+sandwiches = ['pastrami', 'turkey', 'pastrami', 'ham', 'roast beef', 'pastrami']
+print(sandwiches)
+print("We have run out of pastrami. Sorry for any inconvienice")
+while 'pastrami' in sandwiches:
+	sandwiches.remove('pastrami')
+
+print(sandwiches)
+"""
+#7-10
+responses = {}
+polling_active = True
+
+while polling_active:
+	name = input("\nWhat is your name? ")
+	response = input("If you could visit one place in the world, where would you go? ")
+	responses[name] = response
+
+	repeat = input("Would you like to let another person respond? (yes/no) ")
+	if repeat == 'no':
+		polling_active = False
+
+print("\n--- Poll Results ---")
+for name, response in responses.items():
+	print(f"{name} would like to visit {response}.")

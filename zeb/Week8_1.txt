@@ -1,0 +1,30 @@
+#favorite_foods = {
+#	'pizza' = {
+#		'crust' = {
+#			'crust1': 'Thick Crust',
+#			'crust2': 'Thin Crust'
+#			}
+#		'sauce' = {
+#			'sauce1': 'Red Sauce',
+#			'sauce2': 'Barbeque Sauce',
+#			'sauce3': 'No Sauce'
+#			}
+#		'cheese' = {
+#			'cheese1': 'Mozarella',
+#			'cheese2': 'Cheddar',
+#			'cheese3': 'No cheese'
+#			}	
+#	'salad' = 
+#
+
+
+favorite_foods1 = {
+	'pizza_1': {
+		'crust': 'Thick',
+		'sauce': 'Red',
+		'cheese': 'Mozzeralla',
+		'meat': ['sausage', 'peperoni'],
+		'vegetables': ['Bell Pepper', 'Grilled Onions', 'Raw Onions']
+		}
+	}
+print(f"Crust: {favorite_foods1['pizza_1']['crust']} \nSauce: {favorite_foods1['pizza_1']['sauce']}\nCheese: {favorite_foods1['pizza_1']['cheese']}")

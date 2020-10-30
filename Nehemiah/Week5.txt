@@ -1,0 +1,57 @@
+#f = "-"
+#s = "|"
+
+#alpha = list(range(1200))
+#for twenty in alpha:
+	#beta = list(range(60))
+	#for twenty1 in beta:
+		#deta = list(range(59))
+		#for twenty2 in deta:
+			#print(f*twenty2+s*(59-twenty2))
+		#for twenty2 in deta:
+			#print(f*(59-twenty2)+s*twenty2)
+		
+#f = "="
+#s = "]"
+#w = "["
+#q = "-"
+#alpha = list(range(1))
+#for twenty in alpha:
+#	beta = list(range(6))
+#	for twenty1 in beta:
+#		delta = list(range(19))
+#		for twenty2 in delta:
+#		for twenty2 in delta:
+#			print(w+s*twenty2+f*twenty1+q)
+#			for twenty3 in beta:
+#				print("[]]]}=====-")
+#				for twenty4 in beta:
+#					print("[]")
+
+f = " "
+s = "["
+w = "]"
+q = " | "		
+alpha = list(range(1200))
+for twenty in alpha:
+	beta = list(range(60))
+	for twenty1 in beta:
+		deta = list(range(59))
+		for twenty2 in deta:
+			print(f*twenty2+s*(59-twenty2))
+		for twenty2 in deta:
+			print(f*(59-twenty2)+s*twenty2)
+		for twenty2 in data:
+			print(f*twenty2+s*(59-twenty2))
+		for twenty2 in data:
+			print(f*twenty2+s*(59-twenty2))
+		for twenty2 in data:
+			print(f*twenty2+s*(59-twenty2))
+		for twenty2 in data:
+			print(f*twenty2+s*(59-twenty2))
+		for twenty2 in data:
+			print(f*twenty2+s*(59-twenty2))
+		for twenty2 in data:
+			print(f*twenty2+s*(59-twenty2))
+		for twenty2 in data:
+			print(f*twenty2+s*(59-twenty2))
