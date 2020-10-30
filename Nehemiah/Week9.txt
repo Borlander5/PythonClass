@@ -1,0 +1,97 @@
+"""
+#rental_car = input("What kind of car would you like?: ")
+#print(f"Let me see if I can find you a {rental_car}.")
+#print(" ")
+#party = input("How many people are in your party?: ")
+#party = int(party)
+#if party >= 8:
+	#print("You will have to wait. I appologize any inconviences.")
+#else:
+#	print("Your table is ready.")
+#print(" ")
+#number = input("Pick a number from 1 to 5678677655665467.: ")
+#number = int(number)
+#if 10 % number == 0:
+#	print("Your number is a multiple of 10.")
+#else:
+#	print("Your number is not a multiple of 10.")
+#print(" ")
+#topping = "\nPlace your desired topping here: "
+#topping += "\nType QUIT to end."
+
+#message = ""
+#while message != 'QUIT':
+#	message = input(topping)
+
+#	if message != 'QUIT':
+#		print(message)
+prompt = input("What is your age?:")
+tessaract = int(prompt)
+if tessaract < 3:
+	print("Congraluations! You are free.")
+elif tessaract >= 3 and tessaract <= 12:
+	print("That will be $10.")
+else: 
+	print("That will be $15. Sorry for any inconviences.")
+
+topping = "\nPlace your desired topping here: "
+topping += "\nType QUIT to end."
+active = True
+message = ""
+while active:
+	message = input(topping)
+	if message == 'QUIT':
+		break
+
+
+amount = 1
+active = True
+while active:
+	print(amount)
+	amount += 1
+
+unfinished_sams = ['BLT', 'BACON', 'Cheese', 'PBJ', 'Cheese', 'Pastrami', 'BLT', Pastrami', 'BLT', 'BLT', 'BLT', 'Pastrami', 'Pastrami', 'BLT']
+finished_sams = []
+
+while unfinished_sams:
+	current_user = unfinished_sams.pop()
+
+	print(f"Finishing Order: {current_user.title()}")
+	finished_sams.append(current_user)
+	
+print("\nThe following orders have been completed:")
+for finished_sams in finished_sams:
+	print(finished_sams.title())
+
+unfinished_sams = ['BLT', 'BACON', 'Chees', 'PBJ', 'Cheese', 'BLT', 'Pastrami', 'BLT', 'Pastrami', 'BLT']
+finished_sams = []
+print("He have run out of Pastrami, sorry for any inconviences.")
+while 'Pastrami' in unfinished_sams:
+	unfinished_sams.remove('Pastrami')
+while unfinished_sams:
+	current_user = unfinished_sams.pop()
+
+	print(f"Finishing Order: {current_user.title()}")
+	finished_sams.append(current_user)
+	
+print("\nThe following orders have been completed:")
+for finished_sams in finished_sams:
+	print(finished_sams.title())
+"""
+responses = {}
+
+polling_active = True
+
+while polling_active:
+	name = input("\nWhat is your name? ")
+	response = input("If you could go anywhere, where would you go? ")
+
+	responses[name] = response
+
+	repeat = input("Would you like to let another person respond? (yes/no) ")
+	if repeat == 'no':
+		polling_active = False
+
+print("\n---Poll Results---")
+for name, response in responses.items():
+	print(f"{name} would like to go to {response}.")
