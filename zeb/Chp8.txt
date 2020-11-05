@@ -55,7 +55,7 @@ artist = make_album('Michael', 'Jackson', 'Thriller')
 print(artist)
 artist = make_album('Taylor', 'Swift', 'Fearless')
 print(artist)
-"""
+
 #8-7
 def make_album(first_name, last_name, albums, number_songs=None):
 	person = {'First Name': first_name, 'Last Name': last_name, 'Albums': albums}
@@ -85,3 +85,4 @@ while True:
 	
 	user_album = make_album(f_name, l_name, album_choice, songs)
 	print(user_album)
+"""
