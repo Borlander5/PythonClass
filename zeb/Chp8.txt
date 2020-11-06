@@ -110,7 +110,7 @@ print(send_messages)
 
 show_messages(send_messages, sent_messages)
 show_sent_messages(sent_messages)
-"""
+
 #8-12
 def make_sandwiches(*toppings):
 	print("\nMaking a sandwich with the following toppings:")
@@ -119,3 +119,4 @@ def make_sandwiches(*toppings):
 make_sandwiches('Bacon', 'Lettuce', 'Tomato')
 make_sandwiches('Turkey')
 make_sandwiches('Chicken', 'Onions')
+"""
