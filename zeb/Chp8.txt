@@ -86,3 +86,6 @@ while True:
 	user_album = make_album(f_name, l_name, album_choice, songs)
 	print(user_album)
 """
+#8-8
+def show_messages(texts):
+
