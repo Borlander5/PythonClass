@@ -101,4 +101,8 @@ print(message_6)
 print("3-9")
 guest_count = len(guest)
 guest__count = f"{guest_count} people are invited to dinner."
+<<<<<<< HEAD
 print(guest__count)
+=======
+print(guest__count)
+>>>>>>> c4eb42aaaecf4140bc35c3b4480eaa32eebd25a7

@@ -1,0 +1,88 @@
+"""
+#8-1
+def display_message():
+	print("In this chapter we are learning about functions.")
+display_message()
+
+#8-2
+def favorite_book(title):
+	print(f"My favorite book is {title.title()}.")
+favorite_book('Masters of Command')
+
+#8-3
+def make_shirt(shirt_size, shirt_print):
+	print(f"My size shirt is {shirt_size}.")
+	print(f"I would like the following printed on my shirt: {shirt_print}.")
+make_shirt('Medium', 'I am the boss')
+make_shirt(shirt_print='I am the boss', shirt_size='Medium')
+
+#8-4
+def make_shirt(shirt_size='Large', shirt_print='I Love Python'):
+	print(f"My size shirt is {shirt_size}.")
+	print(f"I would like the following printed on my shirt: {shirt_print}.")
+make_shirt()
+make_shirt(shirt_size='Medium')
+make_shirt(shirt_size='Small', shirt_print='I am the boss')
+
+#8-5
+def describe_city(city, country='the USA'):
+	print(f"{city} is in {country}")
+describe_city('New York')
+describe_city('Los Angeles')
+describe_city(city='Moscow', country='Russia')
+
+#8-6
+def city_country(city, country):
+	location = f"{city}, {country}"
+	return location.title()
+area = city_country('Tokyo', 'Japan')
+print(area)
+area = city_country('Paris', 'France')
+print(area)
+area = city_country('Rio de Janero', 'Brazil')
+print(area)
+
+#8-7
+def make_album(first_name, last_name, albums, number_songs=None):
+	person = {'First Name': first_name, 'Last Name': last_name, 'Albums': albums}
+	if number_songs:
+		person['number_songs'] = number_songs
+	return person
+
+artist = make_album('Elvis', 'Presley', 'How great Thou Art', number_songs=15)
+print(artist)
+artist = make_album('Michael', 'Jackson', 'Thriller')
+print(artist)
+artist = make_album('Taylor', 'Swift', 'Fearless')
+print(artist)
+
+#8-7
+def make_album(first_name, last_name, albums, number_songs=None):
+	person = {'First Name': first_name, 'Last Name': last_name, 'Albums': albums}
+	if number_songs:
+		person['number_songs'] = number_songs
+	return person
+
+while True:
+	print("\nPlease tell me your name:")
+	print("(enter 'q' at any time to quit)")
+
+	f_name = input("First name: ")
+	if f_name == 'q':
+		break
+	
+	l_name = input("Last name: ")
+	if l_name == 'q':
+		break
+
+	album_choice = input("Album: ")
+	if album_choice == 'q':
+		break
+
+	songs = input("Number of Songs: ")
+	if songs == 'q':
+		break
+	
+	user_album = make_album(f_name, l_name, album_choice, songs)
+	print(user_album)
+"""

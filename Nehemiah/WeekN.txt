@@ -1,0 +1,24 @@
+food = {
+	'pizza' : {
+		'crust' : 'thick',
+		'toppings' : ['pepperoni' , 'sasauge' , 'bacon'], 
+		'cheese' : 'american',
+		'slices_amount' : '67389467954'
+	},
+	'salad' : {
+		'type' : 'not ceasarz',
+		'cheese' : 'blocks',
+		'chips' : 'crunched',
+		'weight_num' : 'fifteen',
+		'weight_type' : 'tons'
+	}
+}
+
+print(f"Your pizza order has {food['pizza']['crust']} crust.")
+
+me = {'name':{'favorite_color':{'fun':3}}}['name']['favorite_color']['fun']
+
+
+print(f"My name is {me}.")
+
+
