@@ -42,7 +42,7 @@ my_resteraunt3 = Restaurant('Shogun', 'Japanese')
 my_resteraunt.describe_resteraunt()
 my_resteraunt2.describe_resteraunt()
 my_resteraunt3.describe_resteraunt()
-"""
+
 #9-3
 class User:
 
@@ -69,3 +69,31 @@ user3 = User('Nehemiah', 'Borland', 'Portals', 'Avengers')
 user1.describe_user()
 user2.describe_user()
 user3.describe_user()
+
+#9-4
+class Restaurant:
+
+	def __init__(self, name, cuisine):
+		self.resteraunt_name = name
+		self.cuisine_type = cuisine
+		self.seated_reading = 0
+	
+	def describe_resteraunt(self):
+		print(f"This store is called {self.resteraunt_name}.")
+		print(f"We sell {self.cuisine_type}.")
+	
+	def open_resteraunt(self):
+		print(f"{self.resteraunt_name} is now open!")
+
+	def set_number_served(self):
+		print(f"We served {self.seated_reading} people today.")
+
+	def increment_number_served(self, number):
+		self.seated_reading = number
+
+my_resteraunt = Restaurant('Homerun Burger', 'Hamburgers')
+
+my_resteraunt.describe_resteraunt()
+my_resteraunt.seated_reading = 1500
+my_resteraunt.set_number_served()
+"""
