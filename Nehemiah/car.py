@@ -49,7 +49,7 @@ class Battery:
 	def __init__(self, battery_size=75):
 		self.battery_size = battery_size
 
-	def describe_battery(selChof):
+	def describe_battery(self):
 		print(f"This car has a {self.battery_size}-kWh battery.")
 
 	def get_range(self):
@@ -60,16 +60,11 @@ class Battery:
 
 		print(f"This car can go about {range} miles on a full charge.")
 
-class EletricCar(Car):
+class ElectricCar(Car):
 	def __init__(self, make, model, year):
 		super().__init__(make, model, year)
 		self.battery = Battery()
 
-	
-my_tesla = EletricCar('tesla', 'model s', 2019)
-print(my_tesla.get_descriptive_name())
-my_tesla.battery.describe_battery()
-my_tesla.battery.get_range()
 
 """
 my_used_car = Car('subaru', 'outback', 2015)
