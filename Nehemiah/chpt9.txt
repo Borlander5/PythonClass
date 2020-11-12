@@ -1,0 +1,214 @@
+"""
+class Dog:
+	def __init__(self, name, age):
+		self.name = name
+		self.age = age
+
+	def sit(self):
+		print(f"{self.name} is now sitting.")
+
+	def roll_over(self):
+		print(f"{self.name} rolled over!")
+
+
+
+my_dog = Dog('Willie', 6)
+your_dog = Dog('Lucy', 3)
+my_dog.sit()
+print(f"My dog's name is {my_dog.name}.")
+print(f"My dog is {my_dog.age} years old.")
+your_dog.roll_over()
+print(f"My dog's name is {your_dog.name}.")
+print(f"My dog is {your_dog.age} years old.")
+"""
+class Car:
+	def __init__(self, make, model, year):
+		self.make = make
+		self.model = model
+		self.year = year
+		self.odometer_reading = 0
+
+	
+	def get_descriptive_name(self):
+		long_name = f"{self.year} {self.make} {self.model}"
+		return long_name.title()
+
+	def read_odometer(self):
+		print(f"This car has {self.odometer_reading} miles on it.")
+
+	def update_odometer(self, mileage):
+		if mileage >= self.odometer_reading:
+			self.odometer_reading = mileage
+		else:
+			print("You can't roll back an odometer!")
+
+	def increment_odometer(self, miles):
+		self.odometer_reading += miles
+
+class EletricCar(Car):
+	def __init__(self, make, model, year):
+		super().__init__(make, model, year)
+		self.battery_size = 75
+
+	def describe_battery(self):
+		print(f"THis car has a {self.battery_size}-kWh battery.")
+
+	def fill_gas_tank(self):
+		print("This car doesn't need a gas tank!")
+
+my_tesla = EletricCar('tesla', 'model s', 2019)
+print(my_tesla.get_descriptive_name())
+my_tesla.describe_battery()
+
+my_used_car = Car('subaru', 'outback', 2015)
+print(my_used_car.get_descriptive_name())
+
+my_used_car.update_odometer(23_500)
+my_used_car.read_odometer()
+
+my_used_car.increment_odometer(100)
+my_used_car.read_odometer()
+
+
+my_new_car = Car('audi', 'a4', 2019)
+print(my_new_car.get_descriptive_name())
+my_new_car.odometer_reading = 23
+my_new_car.read_odometer()
+my_new_car.update_odometer(23)
+my_new_car.read_odometer()
+
+"""
+
+class Restaurant:
+	def __init__(self, name, cuisine):
+		self.name = name
+		self.cuisine = cuisine
+		self.number_served = 52762
+
+	def what(self):
+		print(f"The name of this restaurant is {self.name}.")
+
+	def serving(self):
+		print(f"{self.cuisine}s are now being served!")
+	
+	def set_number_served(self, worth):
+		self.served_number = worth
+
+
+
+
+
+open_restaurant = Restaurant('IN-N-OUT', 'Cheeseburger')
+print(f"{open_restaurant.name} is now open!")
+open_restaurant.what()
+open_restaurant.serving()
+
+one_restaurant = Restaurant('Texas Roadhouse', 'Steak')
+print(f"{one_restaurant.name} is now open!")
+one_restaurant.what()
+one_restaurant.serving()
+
+two_restaurant = Restaurant('California Pizza Kitchen', 'pizza')
+print(f"{two_restaurant.name} is now open!")
+two_restaurant.what()
+two_restaurant.serving()
+
+three_restaurant = Restaurant('Nowhere', 'Nothing')
+print(f"{three_restaurant.name} is now open!")
+three_restaurant.what()
+three_restaurant.serving()
+
+one_restaurant.number_served = 23
+print(f"{one_restaurant.number_served} customers have been served.")
+
+one_restaurant.number_served = 67
+print(f"{one_restaurant.number_served} customers have been served.")
+
+two_restaurant.number_served = 6
+print(f"{two_restaurant.number_served} customers have been served.")
+
+two_restaurant.number_served = 145
+print(f"{two_restaurant.number_served} customers have been served.")
+
+three_restaurant.number_served = 255
+print(f"{three_restaurant.number_served} customers have been served.")
+
+three_restaurant.number_served = 14613
+print(f"{three_restaurant.number_served} customers have been served.")
+
+restaurant = Restaurant('Burger King', 'Cheeseburger')
+
+restaurant.set_number_served(411)
+print(f"{restaurant.number_served} customers have been served.")
+
+
+
+
+
+class Restaurant:
+	def __init__(self, name, cuisine):
+		self.name = name
+		self.cuisine = cuisine
+		self.number_served = 24
+
+	def what(self):
+		print(f"The name of this restaurant is {self.name}.")
+
+	def serving(self):
+		print(f"{self.cuisine}s are now being served!")
+
+	def set_number_served(self, amount):
+		self.number_reading = amount
+	
+	def increment_number_served(self, worth):
+		self.number_reading += worth
+
+
+restaurant = Restaurant('California Pizza Kitchen', 'Pizza')
+restaurant.what()
+restaurant.serving()
+
+restaurant.set_number_served(35_097)
+print(restaurant.number_reading)
+
+restaurant.increment_number_served(1421_024)
+print(restaurant.number_reading)
+
+restaurant = Restaurant('IN-N-OUT', 'Cheeseburger')
+print(restaurant.number_served)
+restaurant.set_number_served(34)
+print(restaurant.number_reading)
+	
+	#def get_descriptive_name(self):
+		#long_name = f"{self.year} {self.make} {self.model}"
+		#return long_name.title()
+
+	#def read_odometer(self):
+		#print(f"This car has {self.odometer_reading} miles on it.")
+
+	#def update_odometer(self, mileage):
+		#if mileage >= self.odometer_reading:
+			#self.odometer_reading = mileage
+		#else:
+			#print("You can't roll back an odometer!")
+
+	#def increment_odometer(self, miles):
+		#self.odometer_reading += miles
+
+#my_used_car = Car('subaru', 'outback', 2015)
+#print(my_used_car.get_descriptive_name())
+
+#my_used_car.update_odometer(23_500)
+#my_used_car.read_odometer()
+
+#my_used_car.increment_odometer(100)
+#my_used_car.read_odometer()
+
+
+#my_new_car = Car('audi', 'a4', 2019)
+#print(my_new_car.get_descriptive_name())
+#my_new_car.odometer_reading = 23
+#my_new_car.read_odometer()
+#my_new_car.update_odometer(23)
+#my_new_car.read_odometer()
+"""
