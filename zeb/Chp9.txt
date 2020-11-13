@@ -148,7 +148,7 @@ class Admin(User):
 
 my_user = Admin('Zeb', 'Borland', ['Can Ban User', 'Can Add Post', 'Can Delete Post'])
 my_user.show_privileges()
-"""
+
 #9-8
 class User:
 
@@ -175,3 +175,17 @@ class Admin(User):
 
 my_user = Admin('Zeb', 'Borland', ['Can Ban User', 'Can Add Post', 'Can Delete Post'])
 my_user.privileges.show_privileges()
+"""
+#9-13
+import random
+class Die:
+
+	def __init__(self, sides):
+		self.sides = 30
+	
+	def roll_die(self):
+		random_number = random.randint(1, self.sides)
+		print(f"You rolled a {random_number}.")
+
+your_number = Die(23)
+your_number.roll_die()
