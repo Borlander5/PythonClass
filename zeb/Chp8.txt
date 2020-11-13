@@ -85,4 +85,38 @@ while True:
 	
 	user_album = make_album(f_name, l_name, album_choice, songs)
 	print(user_album)
+
+#8-8
+def show_messages(texts):
+	for text in texts:
+		print(text)
+texts = ['Hello There', 'Wassup', 'See you Later']
+show_messages(texts)
+
+#8-9
+def show_messages(send_messages, sent_messages):
+	while send_messages:
+		current_message = send_messages.pop()
+		print(f"Sending message: {current_message}")
+		sent_messages.append(current_message)
+def show_sent_messages(sent_messages):
+	print("\nThe following messages have been sent:")
+	for sent_message in sent_messages:
+		print(sent_message)
+
+send_messages = ['Hello There', 'Wassup', 'See you Later']
+sent_messages = []
+print(send_messages)
+
+show_messages(send_messages, sent_messages)
+show_sent_messages(sent_messages)
+
+#8-12
+def make_sandwiches(*toppings):
+	print("\nMaking a sandwich with the following toppings:")
+	for topping in toppings:
+		print(f"- {topping}")
+make_sandwiches('Bacon', 'Lettuce', 'Tomato')
+make_sandwiches('Turkey')
+make_sandwiches('Chicken', 'Onions')
 """

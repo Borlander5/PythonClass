@@ -1,0 +1,33 @@
+import random
+"""
+class Die:
+	def __init__(self, sides):
+		self.sides = 20
+
+	def roll_die(self):
+		random_number = random.randint(1, self.sides) 
+		print(f"You rolled a {random_number}")
+
+your_number = Die(6)
+your_number.roll_die()
+"""
+
+lottery = [1243, 1251, 151, 14, 46, 134561, 12, 1, 4651, 3124, 'r', 'g', 'h', 'u', 'a']
+
+one_number = lottery[random.randint(0, 14)]
+two_number = lottery[random.randint(0, 14)]
+three_number = lottery[random.randint(0, 14)]
+four_number = lottery[random.randint(0, 14)]
+#print(f"If your number is {one_number}, {two_number}, {three_number}, or {four_number}, then you are the winner!")
+
+roll_count = 0
+my_ticket = 'r'
+loc = 1
+while loc < 5:
+	ticket_number = lottery[random.randint(0, 14)]
+	roll_count = roll_count + 1
+	if ticket_number == my_ticket:
+		break
+
+
+print(f"You Win. Took {roll_count} attempts.")	

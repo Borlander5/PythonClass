@@ -1,0 +1,4 @@
+from chptp9 import Restaurant
+
+new_restaurant = Restaurant('Quodoba', 'Burritos')
+print(f"{new_restaurant.name} is now open! Serving {new_restaurant.cuisine}!")
