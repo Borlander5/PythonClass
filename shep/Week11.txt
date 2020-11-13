@@ -1,0 +1,208 @@
+
+
+#9-1.
+class Restaurant:
+        def __init__(self, name, cuisine):
+                self.name = name
+                self.cuisine = cuisine
+
+        def describe_restaurant(self):
+                print(f"{self.name} is the restaurant's name.")
+                print(f"{self.cuisine} is what they mainly serve.")
+
+        def open_restaurant(self):
+                print(f"{self.name} is now open!")
+
+my_restaurant = Restaurant('Red Lobster', 'Seafood')
+my_restaurant.describe_restaurant()
+my_restaurant.open_restaurant() 
+
+
+#9-2.
+class Restaurant:
+        def __init__(self, name, cuisine):
+                self.name = name
+                self.cuisine = cuisine
+
+        def describe_restaurant(self):
+                print(f"{self.name} is the restaurant's name.")
+                print(f"{self.cuisine} is what they serve.")
+
+        def open_restaurant(self):
+                print(f"{self.name} is now open!")
+
+my_restaurant = Restaurant('Red Lobster', 'Seafood')
+my_restaurant1 = Restaurant('El Nopal', 'Mexican')
+my_restaurant2 = Restaurant('Penn Station', 'Subs')
+
+
+my_restaurant.describe_restaurant()
+my_restaurant1.describe_restaurant()
+my_restaurant2.describe_restaurant()
+
+
+
+
+
+#9-3.
+class User:
+
+    def __init__(self, first_name, last_name, city, city_state, favorite_hobby):
+        self.name = first_name
+        self.name2 = last_name
+        self.city = city
+        self.city_state = city_state
+        self.favorite_hobby = favorite_hobby
+
+    def describe_user(self):
+        print(f"Hello, my name is {self.name} {self.name2}!")
+        print(f"I live in {self.city}, {self.city_state}.")
+        print(f"My favorite thing to do is {self.favorite_hobby}!")
+
+    def greet_user(self):
+        print("Hello {self.name}!")
+
+
+user1 = User('Shep', 'Weldy', 'Louisville', 'Kentucky', 'piano')
+user2 = User('Hooper', 'Briggs', 'Louisville', 'Kentucky', 'basketball')
+user3 = User('Nolan', 'Parry', 'Louisville', 'Kentucky', 'art')
+
+
+user1.describe_user()
+user2.describe_user()
+user3.describe_user()
+
+
+
+
+
+#9-4.
+class Restaurant:
+	def __init__(self, name, cuisine):
+		self.restaurant_name = name
+		self.cuisine_type = cuisine
+		self.seated_reading = 0
+	
+	def describe_restaurant(self):
+		print(f"This store is called {self.restaurant_name}.")
+		print(f"We sell {self.cuisine_type}.")
+	
+	def open_restaurant(self):
+		print(f"{self.restaurantt_name} is now open!")
+	def set_number_served(self):
+		print(f"We got to serve {self.seated_reading} people today.")
+	def increment_number_served(self, number):
+		self.seated_reading = number
+my_restaurant = Restaurant('Marcos', 'pizza')
+my_restaurant.describe_restaurant()
+my_restaurant.seated_reading = 50
+my_restaurant.set_number_served()
+
+
+
+
+
+#9-6.
+class Restaurant:
+        def __init__(self, name, cuisine):
+                self.name = name
+                self.cuisine = cuisine
+
+        def describe_restaurant(self):
+                print(f"{self.name} is the restaurant's name.")
+                print(f"{self.cuisine} is what they mainly serve.")
+
+        def open_restaurant(self):
+                print(f"{self.name} is now open!")
+
+my_restaurant = Restaurant('Red Lobster', 'Seafood')
+my_restaurant.describe_restaurant()
+my_restaurant.open_restaurant()
+
+
+
+
+class IceCreamStand(Restaurant):
+    def __init__(self, flavors):
+            self.flavors = flavors
+
+
+
+
+    def ice_cream(self):
+            print(f"Your {self.flavors} ice cream is now ready!")
+ 
+
+
+Ice_Cream_Stand = IceCreamStand('Rocky Road')
+Ice_Cream_Stand.ice_cream()
+
+
+
+Ice_Cream_Stand = IceCreamStand('Moose Tracks')
+Ice_Cream_Stand.ice_cream()
+
+
+
+
+
+
+
+
+
+#9-7.
+class User:
+
+	def __init__(self, first_name, last_name):
+		self.name = first_name
+		self.name1 = last_name
+
+	def describe_user(self):
+		print(f"Hello {self.name} {self.name1}.")
+
+
+class Admin(User):
+
+	def __init__(self, first_name, last_name, privileges):
+		super().__init__(first_name, last_name)
+		self.privileges = privileges
+
+	def show_privileges(self):
+		print(f"These are the privileges of an Administrator: {self.privileges}")
+
+my_user = Admin('Shep', 'Weldy', ['Can Ban User', 'Can Add Post', 'Can Delete Post'])
+my_user.show_privileges()
+
+
+
+
+#9-8.
+class User:
+
+	def __init__(self, first_name, last_name):
+		self.name = first_name
+		self.name1 = last_name
+
+	def describe_user(self):
+		print(f"Hello {self.name} {self.name1}.")
+
+class Privileges:
+
+	def __init__(self, privileges):
+		self.privileges = privileges
+
+	def show_privileges(self):
+		print(f"These are the privileges of an Administrator: {self.privileges}")
+
+class Admin(User):
+
+	def __init__(self, first_name, last_name, privileges):
+		super().__init__(first_name, last_name)
+		self.privileges = Privileges(privileges)
+
+my_user = Admin('Shep', 'Weldy', ['Can Ban User', 'Can Add Post', 'Can Delete Post'])
+my_user.privileges.show_privileges()
+
+#9-16.
+#Python Module of the Week
+#https://pymotw.com/
