@@ -1,0 +1,2 @@
+In Python you can name and use different variables. In Python you can access elements in a list and change, add, or remove those elements. In Python you can loop through an entire list. In Python you can check for equality. In Python you can access values in a dictionary and modify those values. In Python you can move items from one list to another.      
+In Python you can define a function. In Python you can create and use a class. 
