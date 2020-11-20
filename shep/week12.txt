@@ -1,5 +1,7 @@
 filename = 'learning_python.txt'
 
+"""
+
 #10-1.
 print("--- Reading in the entire file:")
 with open(filename) as f:
@@ -81,3 +83,60 @@ while True:
 with open(filename, 'a') as f:
     for response in responses:
         f.write(f"{response}\no")
+
+"""
+
+#10-6.
+try:
+    x = input("Give me a number: ")
+    x = int(x)
+ 
+
+    y = input("Give me another number: ")
+    y = int(y)
+except ValueError:
+    print("Sorry, I really needed a number.")
+else:
+    sum = x + y
+    print(f"The sum of {x} and {y} is {sum}.")
+
+
+
+
+10-7.
+print("Enter 'q' at any time to quit.\n")
+
+while True:
+    try:
+        x = input("\nGive me a number: ")
+        if x == 'q':
+            break
+
+        x = int(x)
+
+
+        y = input("Give me another number: ")
+        if y == 'q':
+            break
+
+        y = int(y)
+
+    except ValueError:
+        print("Sorry, I really needed a number.")
+
+    else:
+        sum = x + y
+        print(f"The sum of {x} and {y} is {sum}.")
+
+
+
+#10-11.
+import json
+
+
+number = input("What's your favorite number? ")
+
+
+with open('favorite_number.json', 'w') as f:
+    json.dump(number, f)
+    print("Thanks! I'll remember that.")
