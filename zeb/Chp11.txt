@@ -35,9 +35,11 @@ class TestEmployee(unittest.TestCase):
 		self.employee = Employee('Zeb', 'Borland', 143123)
 	def test_give_default_raise(self):
 		self.employee.give_raise()
-		print(f"Your new salary is {self.employee.salary}")
+		print(f"Your new salary is {self.employee.salary}.")
+		self.assertEqual(self.employee.salary, 148123)
 	def test_give_costum_raise(self):
 		self.employee.give_raise(2234)
-		print(f"Your new salary is {self.employee.salary}")
+		print(f"Your new salary is {self.employee.salary}.")
+		self.assertEqual(self.employee.salary, 145357)
 if __name__ == '__main__':
 	unittest.main()
