@@ -1,0 +1,24 @@
+"""
+#11-1
+import unittest
+from Chp11_practice import city_country
+
+class NamesTestCode(unittest.TestCase):
+	def test_first_last_name(self):
+		formatted_name = city_country('tokyo', 'japan')
+		self.assertEqual(formatted_name, 'Tokyo Japan')
+
+if __name__ == '__main__':
+	unittest.main()
+"""
+#11-2
+import unittest
+from Chp11_practice import city_country
+
+class NamesTestCode(unittest.TestCase):
+	def test_first_last_name(self):
+		formatted_name = city_country('tokyo', 'japan')
+		self.assertEqual(formatted_name, 'Tokyo Japan')
+
+if __name__ == '__main__':
+	unittest.main()
