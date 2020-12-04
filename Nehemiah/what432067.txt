@@ -1,0 +1,44 @@
+def display_message():
+	print("I am learning Python!")
+	print("(lound energetic noises)")
+
+display_message()
+
+def favorite_book(message):
+	print(f"I like {message.title()}.")
+
+favorite_book('The Lord of the Rings')
+
+def cities(city, country):
+	print(f"The city of {city.title()} is in {country.title()}")
+
+cities('batman', 'turkey')
+
+
+def quotes(messages):
+	for message in messages:
+		msg = f"{message}"
+		print(msg) 
+		
+lines = ['Hello There', 'That`s no moon', 'This is were the fun begins']
+quotes(lines)
+
+unused_lines = ['Hello There', 'That`s no moon', 'This is were the fun begins']
+completed_lines = []
+
+while unused_lines:
+	current_lines = unused_lines.pop()
+	print(f"{current_lines}")
+	completed_lines.append(current_lines)
+
+print("\nThese lines have been used:")
+for completed_line in completed_lines:
+	print(completed_line)
+
+def make_sandwich(bread, *toppings):
+	print(f"\nMaking a sandwich with {bread} bread and the following toppings:")
+	for topping in toppings:
+		print(f"-{topping}")
+make_sandwich('flatbread', 'pepperoni', 'cheese', 'lettuce')
+make_sandwich('round', 'ham')
+make_sandwich('flatbread', 'Italian BLT')
