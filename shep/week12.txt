@@ -1,0 +1,142 @@
+filename = 'learning_python.txt'
+
+"""
+
+#10-1.
+print("--- Reading in the entire file:")
+with open(filename) as f:
+    contents = f.read()
+print(contents)
+
+print("\n--- Looping over the lines:")
+with open(filename) as f:
+    for line in f:
+        print(line.rstrip())
+
+print("\n--- Storing the lines in a list:")
+with open(filename) as f:
+    lines = f.readlines()
+
+for line in lines:
+    print(line.rstrip())
+
+
+
+#10-2.
+filename = 'learning_python.txt'
+
+
+with open(filename) as f:
+    lines = f.readlines()
+
+
+for line in lines:
+    # Get rid of newline, then replace Python with C.
+    line = line.rstrip()
+    print(line.replace('Python', 'C'))
+
+
+
+#10-3.
+name = input("What's your name? ")
+
+
+filename = 'guest.txt'
+
+
+with open(filename, 'w') as f:
+    f.write(name)
+
+
+
+
+#10-4.
+filename = 'guest_book.txt'
+
+print("Enter 'quit' when you are finished.")
+while True:
+    name = input("\nWhat's you name? ")
+    if name == 'quit':
+        break
+    else:
+        with open(filename, 'a') as f:
+            f.write(f"{name}\n")
+        print("Hi {name, you've been added to the guest book.")
+
+
+
+
+#10-5.
+filename = 'programming_reasons.txt'
+
+
+responses = []
+while True:
+    response = input("\nWhy do you like programming? ")
+    responses.append(response)
+
+    continue_reasons = input("Would you like to let someone else response? ")
+    if continue_reasons != 'yes':
+        break
+
+
+with open(filename, 'a') as f:
+    for response in responses:
+        f.write(f"{response}\no")
+
+"""
+
+#10-6.
+try:
+    x = input("Give me a number: ")
+    x = int(x)
+ 
+
+    y = input("Give me another number: ")
+    y = int(y)
+except ValueError:
+    print("Sorry, I really needed a number.")
+else:
+    sum = x + y
+    print(f"The sum of {x} and {y} is {sum}.")
+
+
+
+
+10-7.
+print("Enter 'q' at any time to quit.\n")
+
+while True:
+    try:
+        x = input("\nGive me a number: ")
+        if x == 'q':
+            break
+
+        x = int(x)
+
+
+        y = input("Give me another number: ")
+        if y == 'q':
+            break
+
+        y = int(y)
+
+    except ValueError:
+        print("Sorry, I really needed a number.")
+
+    else:
+        sum = x + y
+        print(f"The sum of {x} and {y} is {sum}.")
+
+
+
+#10-11.
+import json
+
+
+number = input("What's your favorite number? ")
+
+
+with open('favorite_number.json', 'w') as f:
+    json.dump(number, f)
+    print("Thanks! I'll remember that.")

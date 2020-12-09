@@ -1,0 +1,88 @@
+"""
+filename = 'chpt10p.txt'
+
+with open(filename) as file_object:
+	lines = file_object.readlines()
+
+
+title = input("What is your name: ")
+
+for lines in lines:
+	print(f"Your name is {title.title()}")
+
+filename = 'chpt10p.txt'
+
+status = True
+
+while True:
+	answer = input("What is your name? ")
+	if answer != 'QUIT':
+		print(f"Hello {answer.title()}")
+		with open(filename, 'a') as file_object:
+			file_object.write(answer + '\n')
+	else:
+		break
+
+
+
+with open(filename) as file_object:	
+	lines = file_object.readlines()
+for line in lines:
+	print(f"Your name is {line.title().strip()}")
+
+
+message = "I like dogs."
+print(message)
+correct = message.replace('dogs', 'cats')
+print(correct)
+
+with open(filename) as file_object:
+	lines = file_object.readlines()	
+for line in lines:
+	print(f"Your name is {line.replace('nehemiah', 'bob').title().strip()}")
+
+while 3 < 5:
+	one_answer = input("What is your favorite programming language? ")
+	if one_answer != 'QUIT':
+		with open('filename', 'a') as file_object:
+			file_object.write(one_answer + '\n')
+	else:
+		break
+	
+print("Give me two numbers and I will add them.")
+
+while True:
+	first_number = input("\nFirst Number: ")
+	if first_number == 'q':
+		break
+	second_number = input("\nSecond Number: ")
+	if second_number == 'q':
+		break
+	else:	
+		try:
+			answer = int(first_number) + int(second_number)
+		except ValueError:
+			print("One does not simply add letters!")
+		else:
+			print(answer)
+"""
+filename_one = 'dogs.txt'
+filename_two = 'cats.txt'
+
+
+try:
+	with open(filename_one, encoding='utf-8') as f:
+		contents = f.read()
+except FileNotFoundError:
+	print(f"The {filename_one} does not exist.")
+else:
+	print(contents.upper())
+
+try:
+	with open(filename_two, encoding='utf-8') as f:
+		contents = f.read()
+except FileNotFoundError:
+	print(f"The {filename_two} does not exist.")
+else:
+	print(contents.upper())
+

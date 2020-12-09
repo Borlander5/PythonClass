@@ -1,0 +1,215 @@
+
+#8-1.
+def display_message():
+    """Display what you are learning."""
+    print("I am learning about functions.")
+
+display_message()
+
+
+
+#8-2.
+def favorite_book(username):
+    """Display your favorite book."""
+    print(f"My favorite book is {username.title()}.")
+
+favorite_book('harry potter')
+
+
+
+
+#8-3.
+def make_shirt(shirt_size, shirt_message):
+    """Display information about a shirt."""
+    print(f"\nThe shirt is a {shirt_size}.")
+    print(f"My shirt says {shirt_message}.")
+
+make_shirt('large', 'Just Do It')
+
+
+
+
+def make_shirt(shirt_size, shirt_message):
+    """Display information about a shirt."""
+    print(f"\nThe shirt is a {shirt_size}.")
+    print(f"My shirt says {shirt_message}.")
+
+
+make_shirt(shirt_size='large', shirt_message='Just Do It')
+
+
+
+#8-4.
+def make_shirt(shirt_message, shirt_size='large'):
+    """Display information about a shirt."""
+    print(f"\nThe shirt is a {shirt_size}.")
+    print(f"My shirt says {shirt_message}.")
+
+make_shirt(shirt_message='I love Python')
+
+
+
+def make_shirt(shirt_size, shirt_message='I love Python'):
+    """Display information about a shirt."""
+    print(f"\nThe shirt is a {shirt_size}.")
+    print(f"My shirt says {shirt_message}.")
+
+make_shirt(shirt_size='large')
+
+
+
+def make_shirt(shirt_size, shirt_message='I love Python'):
+    """Display information about a shirt."""
+    print(f"\nThe shirt is a {shirt_size}.")
+    print(f"My shirt says {shirt_message}.")
+
+make_shirt(shirt_size='medium')
+
+
+
+def make_shirt(shirt_size, shirt_message='Be Kind'):
+    """Display information about a shirt."""
+    print(f"\nThe shirt is a {shirt_size}.")
+    print(f"My shirt says {shirt_message}.")
+
+make_shirt(shirt_size='small')
+
+
+
+#8-5.
+def describe_city(city_name, city_country='United States'):
+    """Display information about a city."""
+    print(f"\nThe name of the city is {city_name}.")
+    print(f"The city's country is {city_country}.")
+
+describe_city(city_name='Louisville')
+
+
+
+def describe_city(city_name, city_country='United States'):
+    """Display information about a city."""
+    print(f"\nThe name of the city is {city_name}.")
+    print(f"The city's country is {city_country}.")
+
+describe_city(city_name='Athens')
+
+
+
+
+def describe_city(city_name, city_country='United States'):
+    """Display information about a city."""
+    print(f"\nThe name of the city is {city_name}.")
+    print(f"The city's country is {city_country}.")
+
+describe_city(city_name='Berlin')
+
+
+
+
+
+
+
+
+def get_formatted_name(first_name, last_name):
+    """Return a full name, neatly formatted."""
+    full_name = f"{first_name} {last_name}"
+    return full_name.title()
+
+#This is an infinite loop!
+while True:
+    print("\nPlease tell me your name:")
+    print("(enter 'q' at any time to quit)")
+
+
+    f_name = input("First name: ")
+    if f_name == 'q':
+        break
+    l_name = input("Last name: ")
+    if l_name == 'q':
+        break
+
+
+    formatted_name = get_formatted_name(f_name, l_name)
+    print(f"\nHello, {formatted_name}!")
+
+
+
+
+#8-6.
+def get_city_country(city_name, city_country):
+    """Return a full city name, neatly formatted."""
+    full_city = f"{city_name} {city_country}"
+    return full_city.title()
+
+city = get_city_country('louisville,', 'kentucky')
+print(city)
+
+
+
+def get_city_country(city_name, city_country):
+    """Return a full city name, neatly formatted."""
+    full_city = f"{city_name} {city_country}"
+    return full_city.title()
+
+city = get_city_country('berlin,', 'germany')
+print(city)
+
+
+
+def get_city_country(city_name, city_country):
+    """Return a full city name, neatly formatted."""
+    full_city = f"{city_name} {city_country}"
+    return full_city.title()
+
+city = get_city_country('london,', 'england')
+print(city)
+
+
+
+
+#8-7.
+def show_messages(names):
+    """Print a simple greeting to each user in the list."""
+    for name in names:
+        msg = f"Hello, {name.title()}!"
+        print(msg)
+
+
+usernames = ['zeb', 'nehemiah', 'boaz']
+show_messages(usernames)
+
+
+
+
+
+
+
+
+#8-13.
+def build_profile(first, last, **user_info):
+    """Build a dictionary containing everything we know about a user."""
+    user_info['first_name'] = first
+    user_info['last_name'] = last
+    return user_info
+
+
+user_profile = build_profile('shepherd', 'weldy',
+                              location='louisville',
+                              hobby='piano',
+                              age='14',
+                              grade='9th')
+
+
+print(user_profile)
+
+
+
+
+
+
+
+
+
+
+
+

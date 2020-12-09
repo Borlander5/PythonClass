@@ -1,0 +1,45 @@
+"""
+#11-1
+import unittest
+from Chp11_practice import city_country
+
+class NamesTestCode(unittest.TestCase):
+	def test_first_last_name(self):
+		formatted_name = city_country('tokyo', 'japan')
+		self.assertEqual(formatted_name, 'Tokyo Japan')
+
+if __name__ == '__main__':
+	unittest.main()
+
+#11-2
+import unittest
+from Chp11_practice import city_country
+
+class NamesTestCode(unittest.TestCase):
+	def test_first_last_name(self):
+		formatted_name = city_country('tokyo', 'japan')
+		self.assertEqual(formatted_name, 'Tokyo Japan')
+
+if __name__ == '__main__':
+	unittest.main()
+"""
+#11-3
+
+import unittest
+from Chp11_3 import Employee
+
+
+class TestEmployee(unittest.TestCase):
+
+	def setUp(self):
+		self.employee = Employee('Zeb', 'Borland', 143123)
+	def test_give_default_raise(self):
+		self.employee.give_raise()
+		print(f"Your new salary is {self.employee.salary}.")
+		self.assertEqual(self.employee.salary, 148123)
+	def test_give_costum_raise(self):
+		self.employee.give_raise(2234)
+		print(f"Your new salary is {self.employee.salary}.")
+		self.assertEqual(self.employee.salary, 145357)
+if __name__ == '__main__':
+	unittest.main()

@@ -1,0 +1,96 @@
+"""
+#10-1#
+with open('Chp10_learning_python.txt') as file_object:
+	contents = file_object.read()
+print(contents)
+
+
+filename = 'Chp10_learning_python.txt'
+
+with open(filename) as file_object:
+	lines = file_object.readlines()
+
+pi_string = ''
+
+for line in lines:
+	pi_string += line.strip()
+print(pi_string)
+print(len(pi_string))
+
+with open(filename) as file_object:
+	for line in file_object:
+		print(line)
+
+#10-2#
+message = "In Python you can do many things"
+message = message.replace('Python', 'Linux')
+print(message)
+
+
+#10-3#
+filename = "whatname.txt"
+name = input("What is your name? ")
+with open(filename, 'a') as file_object:
+	file_object.write(f"This is {name}. \r\n")
+
+#10-5#
+responses = {}
+filename = 'problem8-10.txt'
+polling_active = True
+
+while polling_active:
+	name = input("\nWhat is your name? ")
+	response = input("\nWhy do you like Programming? ")
+	repeat = input("Would you like to let another person respond? (yes/no) ")
+	if repeat == 'no':
+		polling_active = False
+		print("Thank you for your time")
+with open(filename, 'a') as file_object:
+	file_object.write(f"{name} like programming because {response}. \r\n")
+
+#10-6#
+print("Please give two numbers and I will divide them.")
+number1 = input("Number 1: ")
+number2 = input("Number 2: ")
+try:
+	answer = int(number1) + int(number2)
+except ValueError:
+	print("Please enter a number.")
+else:
+	print(answer)
+
+#10-7#
+print("Give me two number, and I'll divide them.")
+print("Enter 'q' to quit.")
+
+while True:
+	first_number = input("\nFirst number: ")
+	if first_number == 'q':
+		break
+	second_number = input("Second number: ")
+	if second_number == 'q':
+		break
+	try:
+		answer = int(first_number) + int(second_number)
+	except ZeroDivisionError:
+		print("You can't divide by zero")
+	except ValueError:	
+		print("Please use numbers")
+	else:
+		print(answer)
+
+#10-11#
+import json
+
+filename = 'username.json'
+try:
+	with open(filename) as f:
+		favorite_number = json.load(f)
+except FileNotFoundError:
+	favorite_number = input("What is your favorite number? ")
+	with open(filename, 'w') as f:
+		json.dump(favorite_number, f)
+		print(f"We'll remember your favorite number when you come back!")
+else:
+	print(f"Your favorite number is {favorite_number}!")
+"""
