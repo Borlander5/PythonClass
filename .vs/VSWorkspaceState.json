@@ -2,12 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\Nehemiah",
-    "\\Nehemiah\\Aliens",
-    "\\shep",
-    "\\shep\\Aliens",
-    "\\shep\\Aliens\\images",
-    "\\zeb"
+    "\\Nehemiah\\Aliens"
   ],
-  "SelectedNode": "\\shep\\Aliens\\settings.py",
+  "SelectedNode": "\\Nehemiah\\Aliens\\alien_invasion.py",
   "PreviewInSolutionExplorer": false
 }
