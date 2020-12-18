@@ -10,7 +10,7 @@ class Ship:
         self.screen_rect = ai_game.screen.get_rect()
 
         #Load the ship image and get its rect.
-        self.image = pygame.image.load("C:\\Users\\Kids\\source\\repos\\pythonclass\\Nehemiah\\Aliens\\images\\X-Wing.bmp")
+        self.image = pygame.image.load("C:\\Users\\Kids\\source\\repos\\pythonclass\\Nehemiah\\Aliens\\images\\x-wing2.bmp")
         self.rect = self.image.get_rect()
 
         #Start each new sip at the bottom center of the screen.
