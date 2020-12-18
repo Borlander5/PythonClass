@@ -47,7 +47,7 @@ class AlienInvasion:
             self._update_screen()
 
     def _update_bullets(self):
-        """Update posiiton of bullets and get rid of old bullets."""
+        """Update positon of bullets and get rid of old bullets."""
         #Update bullet positions.
         self.bullets.update()
 
@@ -96,6 +96,9 @@ class AlienInvasion:
             self.ship.moving_right = False
         elif event.key == pygame.K_LEFT:
             self.ship.moving_left = False
+        elif event.key == pygame.K_SPACE:
+            self._fire_bullet()
+
 
     def _fire_bullet(self):
         """Create a new bullet and add it to the bullets group."""
