@@ -62,6 +62,7 @@ class AlienInvasion:
         if len(self.bullets) < self.settings.bullets_allowed:
             new_bullet = Bullet(self)
             self.bullets.add(new_bullet)
+
     def _create_fleet(self):
         alien = Alien(self)
         self.aliens.add(alien) 
