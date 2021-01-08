@@ -117,7 +117,7 @@ class AlienInvasion:
         self.settings.fleet_direction *= -1
 
     def _ship_hit(self):
-        if self.stats.ships_left > 0
+        if self.stats.ships_left > 0:
             self.stats.ships_left -= 1
             self.aliens.empty()
             self.bullets.empty()
@@ -127,22 +127,19 @@ class AlienInvasion:
         else:
             self.sstats.game_active = False
 
-    def _check_aliens_botom()self:
-        screen_rect = self.scree.get_rect()
+    def _check_aliens_bottom(self):
+        screen_rect = self.screen.get_rect()
         for alien in self.aliens.sprites():
             if alien.rect.bottom >= screen_rect.bottom:
                 self._ship_hit()
                 break
-
     def _update_aliens(self):
         self._check_fleet_edges()
         self.aliens.update()
-
         if pygame.sprite.spritecollideany(self.ship, self.aliens):
             self._ship_hit()
             print("Ship Hit!!!")
         self._check_aliens_bottom()
-
     def _update_screen(self):
         self.screen.fill(self.settings.bg_color)           
         self.ship.blitme()
