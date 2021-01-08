@@ -25,8 +25,8 @@ class AlienInvasion:
         self.bullets = pygame.sprite.Group()
         self.aliens = pygame.sprite.Group()
         
-        self._create_fleet()
-
+        #self._create_AlienGrid()
+        self._create_AlienBoss()
     def run_game(self):
         while True:
             self._check_events()
@@ -67,8 +67,8 @@ class AlienInvasion:
             new_bullet = Bullet(self)
             self.bullets.add(new_bullet)
 
-    def _create_fleet(self):
-        alien = Alien(self)
+    def _create_AlienGrid(self):
+        alien = Alien(self, False)
         alien_width, alien_height = alien.rect.size
         available_space_x = self.settings.screen_width - (2 * alien_width)
         number_aliens_x = available_space_x // (2 * alien_width)
@@ -79,10 +79,13 @@ class AlienInvasion:
 
         for row_number in range(number_rows):
             for alien_number in range(number_aliens_x):
-                self._create_alien(alien_number, row_number)
+                self._create_alien(alien_number, row_number, False)
 
-    def _create_alien(self, alien_number, row_number):
-        alien = Alien(self)
+    def _create_AlienBoss(self):
+        self._create_alien(0, 0, True)
+
+    def _create_alien(self, alien_number, row_number, amIABoss):
+        alien = Alien(self, amIABoss)
         alien_width, alien_height = alien.rect.size
         alien.x = alien_width + 2 * alien_width * alien_number
         alien.rect.x = alien.x
@@ -103,7 +106,8 @@ class AlienInvasion:
         collisons = pygame.sprite.groupcollide(self.bullets, self.aliens, True, True)
         if not self.aliens:
             self.bullets.empty()
-            self._create_fleet()
+            #self._create_AlienGrid()
+            self._create_AlienBoss()
 
     def _check_fleet_edges(self):
         for alien in self.aliens.sprites():
@@ -121,7 +125,8 @@ class AlienInvasion:
             self.stats.ships_left -= 1
             self.aliens.empty()
             self.bullets.empty()
-            self._create_fleet()
+            #self._create_AlienGrid()
+            self._create_AlienBoss()
             self.ship.center_ship()
             sleep(0.5)
         else:

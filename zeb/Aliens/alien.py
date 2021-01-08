@@ -3,12 +3,12 @@ from pygame.sprite import Sprite
 
 class Alien(Sprite):
     """A class to represent a single alien in the fleet."""
-    def __init__(self, ai_game):
+    def __init__(self, ai_game, amIABoss):
         """Initialize the laien and set its rect attribute."""
         super().__init__()
         self.screen = ai_game.screen
         self.settings = ai_game.settings
-
+        self.amIABoss = amIABoss
         # Load the alien image and set its rect attribute.
         self.image = pygame.image.load('C:\\Users\\Kids\\source\\repos\\PythonClass\\zeb\\Aliens\\images\\AlienShip.bmp')
         self.rect = self.image.get_rect()
@@ -28,5 +28,9 @@ class Alien(Sprite):
 
     def update(self):
         """Move the alien to the right or left"""
-        self.x += (self.settings.alien_speed * self.settings.fleet_direction)
-        self.rect.x = self.x
+        if self.amIABoss == False:
+            self.x += (self.settings.alien_speed * self.settings.fleet_direction)
+            self.rect.x = self.x
+        else:
+            self.x += (self.settings.alien_speed * self.settings.fleet_direction)
+            self.rect.x = self.x
