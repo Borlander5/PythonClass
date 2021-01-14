@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Nehemiah",
+    "\\zeb",
+    "\\zeb\\Aliens",
+    "\\zeb\\Aliens\\images"
   ],
+  "SelectedNode": "\\zeb\\Aliens\\alien_invastion.py",
   "PreviewInSolutionExplorer": false
 }
