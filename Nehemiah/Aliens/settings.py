@@ -13,10 +13,10 @@ class Settings:
         self.ship_limit = 3
 
         #Bullet Settings
-        self.bullet_speed = 20.0
-        self.bullet_width = 3000
-        self.bullet_height = 500000000
-        self.bullet_color = (0, 0, 0)
+        self.bullet_speed = 5.0
+        self.bullet_width = 5
+        self.bullet_height = 99999999
+        self.bullet_color = (250, 0, 0)
         self.bullets_allowed = 1000
 
         #Alien Settings
@@ -24,4 +24,5 @@ class Settings:
         self.fleet_drop_speed = 10
         #fleet_direction of 1 represents right; -1 represents left.
         self.fleet_direction = 1
+
 
