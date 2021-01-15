@@ -79,13 +79,13 @@ class AlienInvasion:
 
         for row_number in range(number_rows):
             for alien_number in range(number_aliens_x):
-                self._create_alien(alien_number, row_number, False)
+                self._create_alien(alien_number, row_number)
 
     def _create_AlienBoss(self):
-        self._create_alien(0, 0, True)
+        self._create_alien(0, 0)
 
-    def _create_alien(self, alien_number, row_number, amIABoss):
-        alien = Alien(self, amIABoss)
+    def _create_alien(self, alien_number, row_number):
+        alien = Alien(self)
         alien_width, alien_height = alien.rect.size
         alien.x = alien_width + 2 * alien_width * alien_number
         alien.rect.x = alien.x
@@ -130,7 +130,7 @@ class AlienInvasion:
             self.ship.center_ship()
             sleep(0.5)
         else:
-            self.sstats.game_active = False
+            self.stats.game_active = False
 
     def _check_aliens_bottom(self):
         screen_rect = self.screen.get_rect()
