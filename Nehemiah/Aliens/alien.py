@@ -1,4 +1,5 @@
 import pygame
+import math
 
 from pygame.sprite import Sprite
 
@@ -25,6 +26,9 @@ class Alien(Sprite):
 
         #Store the alien's exact horizontal position.
         self.x = float(self.rect.x)
+        self.y = float(self.rect.y)
+        self.path = 1
+        self.pathCount = 0
 
     def check_edges(self):
         """Return True if alien is at edge of screen."""
@@ -35,10 +39,41 @@ class Alien(Sprite):
     def update(self):
         """Move the alien right or left."""
         
-        self.x += (self.settings.alien_speed * self.settings.fleet_direction)
-        self.rect.x = self.x
+        if self.path == 1: 
+            self.x += (self.settings.alien_speed * self.settings.fleet_direction)
+            self.y += (self.settings.alien_speed * self.settings.fleet_direction)
+
+        elif self.path == 2:
+            self.x -= (self.settings.alien_speed * self.settings.fleet_direction)
+            self.y -= (self.settings.alien_speed * self.settings.fleet_direction)        
+        elif self.path == 3:
+            self.y += (self.settings.alien_speed * self.settings.fleet_direction)    
+
+        elif self.path == 4:
+            self.y -= (self.settings.alien_speed * self.settings.fleet_direction)           
+            self.x += (self.settings.alien_speed * self.settings.fleet_direction)
+            
+        elif self.path == 5:
+            self.y += (self.settings.alien_speed * self.settings.fleet_direction) 
+            self.x += (self.settings.alien_speed * self.settings.fleet_direction)
+
+        elif self.path == 6:
+            self.y -= (self.settings.alien_speed * self.settings.fleet_direction) 
+            self.x -= (self.settings.alien_speed * self.settings.fleet_direction)
         
+        elif self.path == 7:
+            self.y += (self.settings.alien_speed * self.settings.fleet_direction) 
 
+        elif self.path == 8:
+            self.x -= (self.settings.alien_speed * self.settings.fleet_direction)
 
+        elif self.path >= 9:
+            self.y += (self.settings.alien_speed * self.settings.fleet_direction) 
 
-  
+        self.pathCount += 1
+        if self.pathCount >= 475:
+            self.path += 1
+            self.pathCount = 0
+
+        self.rect.y = self.y
+        self.rect.x = self.x        
