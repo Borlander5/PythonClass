@@ -29,7 +29,7 @@ class AlienInvasion:
         self.bullets = pygame.sprite.Group()
         self.aliens = pygame.sprite.Group()
 
-        self._create_fleet()
+        self._create_alien_boss()
 
         # Set the background color.
         self.bg_color = (230, 230, 230)
@@ -73,7 +73,7 @@ class AlienInvasion:
         if not self.aliens:
             # Destroy existing bullets and create new fleet.
             self.bullets.empty()
-            self._create_fleet()
+            self._create_alien_boss()
 
    
 
@@ -123,7 +123,10 @@ class AlienInvasion:
         # Make the most recently drawn screen visible.
         pygame.display.flip() 
 
-    def _create_fleet(self):
+    def _create_alien_boss(self):        
+        self._create_alien(1, 1)
+
+    def _create_alien_grid(self):
         """Create the fleet of aliens."""
         # Create an alien and find the number of aliens in a row.
         # Spacing between each alien is equal to onw alien width.
@@ -152,8 +155,7 @@ class AlienInvasion:
         alien.rect.y = alien.rect.height + 2 * alien.rect.height * row_number
         self.aliens.add(alien)
 
-        alien = Alien(self)
-        self.aliens.add(alien)
+        
 
     def _check_fleet_edges(self):
         """Respond in appropiatley if any aliens have reached an edge."""
@@ -165,7 +167,7 @@ class AlienInvasion:
     def _change_fleet_direction(self):
         """Drop the entire fleet and change the fleet's direction."""
         for alien in self.aliens.sprites():
-            alien.rect.y += self.settings.fleet_drop_speed
+            alien.rect.x += self.settings.fleet_drop_speed
         self.settings.fleet_direction *= -1
 
     def _ship_hit(self):
@@ -178,7 +180,7 @@ class AlienInvasion:
             self.bullets.empty()
 
             # Create a new fleet and center the ship.
-            self._create_fleet()
+            self._create_alien_boss()
             self.ship.center_ship()
 
             # Pause.
@@ -192,7 +194,7 @@ class AlienInvasion:
         Check in the fleet is at an edge,
            then update the position of all aliens in the fleet.
         """
-        self._check_fleet_edges()
+        #self._check_fleet_edges()
         self.aliens.update()
 
         # Look for alien-ship collisions.
