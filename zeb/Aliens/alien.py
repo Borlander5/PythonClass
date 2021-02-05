@@ -30,7 +30,6 @@ class Alien(Sprite):
 
     def update(self):
         """Move the alien to the right or left"""
-
         if self.route == 1:
             self.x += (self.settings.alien_speed * self.settings.fleet_direction)
             self.y += (self.settings.alien_speed * self.settings.fleet_direction)
@@ -39,16 +38,22 @@ class Alien(Sprite):
         elif self.route == 3:
             self.y -= (self.settings.alien_speed * self.settings.fleet_direction)
         elif self.route == 4:
-             self.x += (self.settings.alien_speed * self.settings.fleet_direction)
+            self.x += (self.settings.alien_speed * self.settings.fleet_direction)
         elif self.route == 5:
             self.x -= (self.settings.alien_speed * self.settings.fleet_direction)
             self.y += (self.settings.alien_speed * self.settings.fleet_direction)
         elif self.route >= 6:
             self.y += (self.settings.alien_speed * self.settings.fleet_direction)
 
-        self.routeCount += 1
-        if self.routeCount >= 125:
-            self.route += 1
-            self.routeCount = 0
+        if self.route == 4:
+            if self.rect.right >= self.screen.get_rect().right or self.rect.left <= 0:
+                self.route += 1
+        else:
+            self.routeCount += 1
+            if self.routeCount >= 125:
+                self.route += 1
+                self.routeCount = 0
+
+
         self.rect.x = self.x
         self.rect.y = self.y
