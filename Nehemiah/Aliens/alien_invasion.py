@@ -139,6 +139,10 @@ class AlienInvasion:
         
     def _create_alien_boss(self):
         self._create_alien(1, 1)
+        self._create_alien(2, 2)
+        self._create_alien(3, 3)
+        self._create_alien(4, 4)
+        self._create_alien(5, 5)
 
     def _create_alien(self, alien_number, row_number):
         """Create an alien and place in in the row."""
