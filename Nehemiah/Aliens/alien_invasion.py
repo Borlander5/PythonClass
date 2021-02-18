@@ -139,6 +139,10 @@ class AlienInvasion:
         
     def _create_alien_boss(self):
         self._create_alien(1, 1)
+        self._create_alien(2, 2)
+        self._create_alien(3, 3)
+        self._create_alien(4, 4)
+        self._create_alien(5, 5)
 
     def _create_alien(self, alien_number, row_number):
         """Create an alien and place in in the row."""
@@ -151,7 +155,7 @@ class AlienInvasion:
 
     def _update_aliens(self):
         """Check if the fleet is at an edge, then update the positions of all aliens in the fleet."""
-        self._check_fleet_edges()
+        #self._check_fleet_edges()
         self.aliens.update()
 
         #Look for alien-ship collisions.
