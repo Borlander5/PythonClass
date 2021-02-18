@@ -83,6 +83,8 @@ class AlienInvasion:
 
     def _create_AlienBoss(self):
         self._create_alien(0, 0)
+        self._create_alien(3, 3)
+        self._create_alien(7, 7)
 
     def _create_alien(self, alien_number, row_number):
         alien = Alien(self)
