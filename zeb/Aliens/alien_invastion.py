@@ -87,7 +87,6 @@ class AlienInvasion:
 
     def _create_alien(self, xlocation, ylocation):
         alien = Alien(self)
-        alien_width, alien_height = alien.rect.size
         alien.x = xlocation
         alien.rect.x = alien.x
         alien.y = ylocation
