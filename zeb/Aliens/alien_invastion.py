@@ -82,16 +82,15 @@ class AlienInvasion:
                 self._create_alien(alien_number, row_number)
 
     def _create_AlienBoss(self):
-        self._create_alien(0, 0)
-        self._create_alien(3, 3)
-        self._create_alien(7, 7)
+        self._create_alien(20, 80)
+        self._create_alien(780, 200)
 
-    def _create_alien(self, alien_number, row_number):
+    def _create_alien(self, xlocation, ylocation):
         alien = Alien(self)
-        alien_width, alien_height = alien.rect.size
-        alien.x = alien_width + 2 * alien_width * alien_number
+        alien.x = xlocation
         alien.rect.x = alien.x
-        alien.rect.y = alien.rect.height + 2 * alien.rect.height * row_number
+        alien.y = ylocation
+        alien.rect.y = alien.y
         self.aliens.add(alien)
 
     def _update_bullets(self):
