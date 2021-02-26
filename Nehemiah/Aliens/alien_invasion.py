@@ -32,6 +32,7 @@ class AlienInvasion:
         self.bullets = pygame.sprite.Group()
         self.aliens = pygame.sprite.Group()
         self.alien = Alien(self)
+        self.alien_number = 1
 
         self._create_alien_boss()
 
@@ -137,19 +138,20 @@ class AlienInvasion:
                 self._create_alien(xloc, yloc)
         
     def _create_alien_boss(self):
-        self._create_alien(self.alien.rect.width  - 50, self.alien.rect.height - 50)
-        #self._create_alien(self.alien.rect.width  - 100, self.alien.rect.height - 50)
-        #self._create_alien(self.alien.rect.width  - 150, self.alien.rect.height - 50)
-        #self._create_alien(self.alien.rect.width  - 200, self.alien.rect.height - 50)
-        #self._create_alien(self.alien.rect.width  - 250, self.alien.rect.height - 50)
+        for alien_quantity in range(1, self.alien_number):
+            self._create_alien(alien_quantity * 100, 150, self.alien_number / 5)
 
-    def _create_alien(self, xloc, yloc):
+        self.alien_number += 1
+
+    def _create_alien(self, xloc, yloc, alien_speed):
         """Create an alien and place in in the row."""
         alien = Alien(self)
-        alien_width, alien_height = alien.rect.size
+        #alien_width, alien_height = alien.rect.size
         alien.x = xloc
+        alien.y = yloc
         alien.rect.x = alien.x
-        alien.rect.y = yloc
+        alien.rect.y = alien.y
+        alien.alien_speed = alien_speed
         self.aliens.add(alien)
 
     def _update_aliens(self):

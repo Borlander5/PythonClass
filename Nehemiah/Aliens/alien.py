@@ -33,6 +33,7 @@ class Alien(Sprite):
         self.yDirection = 1
         self.xDirection = 1
         self.fake_bottom = 300
+        self.alien_speed = 1
 
     def check_edges(self):
         """Return True if alien is at edge of screen."""
@@ -41,8 +42,8 @@ class Alien(Sprite):
             return True
 
     def update(self): 
-        self.x += self.xDirection * self.settings.alien_speed
-        self.y += self.yDirection * self.settings.alien_speed
+        self.x += self.xDirection * self.alien_speed
+        self.y += self.yDirection * self.alien_speed
         self.fake_bottom += 0.1
 
         self.rect.y = self.y
