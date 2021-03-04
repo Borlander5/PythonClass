@@ -24,3 +24,6 @@ class Settings:
         self.fleet_drop_speed = 10
         #fleet_direction of 1 represents right; -1 represents left.
         self.fleet_direction = 1
+
+        #Scoring
+        self.alien_points = 999990

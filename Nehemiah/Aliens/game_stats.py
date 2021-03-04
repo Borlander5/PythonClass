@@ -9,8 +9,7 @@ class GameStats:
         # Start game in a inactive state.
         self.game_active = False
 
-        #Start Alien Invasion in an active state.
-        #self.game_active = True
+        self.high_score = 0
 
     def reset_stats(self):
         """Initialize statistics."""
