@@ -1,5 +1,6 @@
 import pygame
 import math
+import time
 
 
 from pygame.sprite import Sprite
@@ -57,8 +58,8 @@ class Alien(Sprite):
             self.xDirection += -1
         elif self.x <= 0:
             self.xDirection += 1
-
-
+        
+ 
     """
     def update(self):        
         if self.path == 1: 

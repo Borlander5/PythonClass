@@ -36,6 +36,7 @@ class AlienInvasion:
         self.aliens = pygame.sprite.Group()
         self.alien = Alien(self)
         self.alien_number = 1
+        self.alien_image = pygame.image.load("Nehemiah\\Aliens\\images\\unnamed.bmp")
 
         self._create_alien_boss()
 
