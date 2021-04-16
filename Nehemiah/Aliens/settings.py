@@ -26,4 +26,4 @@ class Settings:
         self.fleet_direction = 1
 
         #Scoring
-        self.alien_points = 999999999999950
+        self.alien_points = 50
