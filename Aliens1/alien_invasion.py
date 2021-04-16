@@ -36,11 +36,11 @@ class AlienInvasion:
         self.aliens = pygame.sprite.Group()
         self.alien = Alien(self)
         self.alien_number = 1
-        self.alien_image = pygame.image.load("Nehemiah\\Aliens\\images\\unnamed.bmp")
+
 
         self._create_alien_boss()
 
-        self.play_button = Button(self, "Play")
+        self.play_button = Button(self, "Let's Go!")
 
     def run_game(self):
         """Start the main loop for the game."""
@@ -73,6 +73,12 @@ class AlienInvasion:
             self.bullets, self.aliens, True, True)
 
         if collisions:
+            self.alien.image = pygame.image.load("Aliens1\\images\\boom.bmp")
+            self._update_aliens()
+            sleep(.5)
+            self.alien.image = pygame.image.load("Aliens1\\images\\unnamed.bmp")   
+            self._update_aliens()
+
             for aliens in collisions.values():
                 self.stats.score += self.settings.alien_points * len(aliens)
             self.sb.prep_score()
@@ -195,7 +201,8 @@ class AlienInvasion:
         """Check if the fleet is at an edge, then update the positions of all aliens in the fleet."""
         #self._check_fleet_edges()
         self.aliens.update()
-
+          
+        
         #Look for alien-ship collisions.
         if pygame.sprite.spritecollideany(self.ship, self.aliens):
             self._ship_hit()
@@ -220,9 +227,11 @@ class AlienInvasion:
         """Respond to the ship being hit by an alien."""
         if self.stats.ships_left > 0:
             #Decrement ships left.
+
             self.stats.ships_left -= 1
             self.sb.prep_ships()
             #Get rid of any remaining aliens and bullets.
+
             self.aliens.empty()
             self.bullets.empty()
 
