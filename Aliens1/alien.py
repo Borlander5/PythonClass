@@ -1,7 +1,7 @@
 import pygame
 import math
 import time
-
+from datetime import date, timedelta, datetime
 
 from pygame.sprite import Sprite
 
@@ -15,7 +15,7 @@ class Alien(Sprite):
         self.settings = ai_game.settings
 
         #Load the alien image and set its rect attribute.
-        self.image = pygame.image.load("Nehemiah\\Aliens\\images\\unnamed.bmp")
+        self.image = pygame.image.load("Aliens1\\images\\unnamed.bmp")
         self.rect = self.image.get_rect()
 
         
@@ -35,6 +35,7 @@ class Alien(Sprite):
         self.xDirection = 1
         self.fake_bottom = 300
         self.alien_speed = 1
+        self.alive = True
 
     def check_edges(self):
         """Return True if alien is at edge of screen."""
@@ -43,13 +44,13 @@ class Alien(Sprite):
             return True
 
     def update(self): 
-        self.x += self.xDirection * self.alien_speed
-        self.y += self.yDirection * self.alien_speed
-        self.fake_bottom += 0.1
+        if self.alive == True:
+            self.x += self.xDirection * self.alien_speed
+            self.y += self.yDirection * self.alien_speed
+            self.fake_bottom += 0.1
 
         self.rect.y = self.y
         self.rect.x = self.x 
-
         screen_rect = self.screen.get_rect()
 
         if self.y >= self.fake_bottom or self.y <= 0: 
@@ -59,6 +60,12 @@ class Alien(Sprite):
         elif self.x <= 0:
             self.xDirection += 1
         
+    def explode(self):
+        self.image = pygame.image.load("Aliens1\\images\\boom.bmp")
+        self.rect = self.image.get_rect()
+        self.alive = False
+        self.destroyAfter = datetime.now() + timedelta(milliseconds = 500)
+
  
     """
     def update(self):        
