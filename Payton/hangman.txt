@@ -1,0 +1,35 @@
+from random import *
+
+
+wordlist = ["hamburger", "potato", "french fries"]
+wordindex = randint(0, len(wordlist)-1)
+myword = wordlist[wordindex]
+wordguess = []
+for chr in myword:
+	wordguess.append("_")
+print("CHEAT: Your word is: " + myword)
+
+ 
+
+currentguess = ""
+for chr in wordguess:
+	currentguess = currentguess + chr + " "
+print(currentguess)
+
+ 
+
+
+choice = input("Please pick a letter: ")
+letter_found = False
+for chr_index in range(0, len(myword)-1):
+	chr = myword[chr_index]
+	if choice == chr:
+                                wordguess[chr_index] = chr
+                                letter_found = True
+
+ 
+
+currentguess = ""
+for chr in wordguess:
+	currentguess = currentguess + chr + " "
+print(currentguess)

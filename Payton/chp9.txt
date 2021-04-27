@@ -1,0 +1,16 @@
+class ToyGun:
+	def __init__(self, color, bullet_count, ammo_type):
+		self.color = color
+		self.bullet_count = bullet_count
+		self.ammo_type = ammo_type
+		print("Hello, you created a toy gun")
+
+	def shoot(self):
+		print("A bullet was fired")
+		self.bullet_count = self.bullet_count - 1
+
+
+my_toy_gun = ToyGun("blue", 10, "nerf")
+print(my_toy_gun.bullet_count)
+my_toy_gun.shoot()
+print(my_toy_gun.bullet_count)
