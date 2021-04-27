@@ -1,0 +1,3 @@
+car = "Hello, welcome to Rental Car Your Face Off. We are very happy you're here. What type of rental car whould you like?"
+name = input(car)
+print(f"\nLet me see if I can find you a {name}. While you wait we have an abundent amount of copies of the book War and Peace. If you don't finish one of these books by the time we have found a {name} then you should GET LOST UNTIL YOU WIN THE LOTTERY FOR MY PROGRAMER! Otherwise, have a wonderful day.")

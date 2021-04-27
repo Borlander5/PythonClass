@@ -1,0 +1,5 @@
+if 'green' in alien_colors:
+     print("You just earned five stinken good points!")
+elif 'red' in alien_colors:
+     print("You just earned ten stinken good points!")
+

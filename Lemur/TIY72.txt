@@ -1,0 +1,9 @@
+number = input("Hello, welcome to A Table For Nine, the best and nicest resturant in nearest one hundred miles. How many people are in your dinner group this evening?")
+number = int(number)
+
+if number <= 8:
+	print(f"\nThe number of people in this group is unexceptional. Did you not read that the name of the resturant is A Table For Nine!? Get lost you unintelligent barbarian(s), no wonder you don't have enough people in your group, who would want to be around you, you flea bag(s), GET LOST, I DON'T WANT TO SEE YOUR DIRTY LITTLE FACE(S) again until you can scrape up some useless pieces of junk who have nothing better to do!")
+elif number >= 10:
+	print(f"\nThe number of people in this group is unexceptional. Did you not read that the name of the resturant is A Table For Nine!? Get lost you unintelligent barbarian(s), you usless pile of apes, what are you guys a big bunch of human magnets, more like maggots, GET LOST I tell you GET LOST and do not come back until you have ditched the extra pieces of junk through quote un quote accidents! If you need any help, Mustard Gas R Us is one block down.")
+elif number == 9:
+	print(f"\nThe number of people in this group is absolutely delightful. Thank you for choosing to dine with us this evening. We assure you that you will not regret it.")

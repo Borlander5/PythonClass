@@ -1,0 +1,6 @@
+for value in range(1, 1000000001)
+	is_even = (value % 2)
+	if is_even is True:
+		print("Lemurs                                              Lemurs                                              Lemurs                                              Lemurs                                              Lemurs                                              Lemurs                                              Lemurs                                              Lemurs                                              Lemurs                                              Lemurs                                              Lemurs                                              Lemurs                                              Lemurs                                              Lemurs                                              Lemurs                                              Lemurs                                              Lemurs                                              Lemurs                                              Lemurs                                              Lemurs                   ")
+	else:
+		print("Are on fire")

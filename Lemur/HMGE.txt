@@ -1,0 +1,69 @@
+print("Try to guess what the word is one letter at a time. Please keep track of your guesses and try to get the word within seven.")
+prompt = '\nWhat is your guess?:'
+prompt += "\nEnter 'Give Up' when you give up or run out of guesses. Enter 'I Win' when you have guessed the word within seven guesses.                                                                                                                                                                                                                                                                                                                                                                                                                       "
+
+
+while True:
+	guess = input(prompt)
+
+	if guess == 'a':
+		print(f"{guess.lower()} is not in the word try again. You now have one less guess than you had before.")
+	elif guess == 'b':
+		print(f"{guess.lower()} is not in the word try again. You now have one less guess than you had before.")
+	elif guess == 'c':
+		print(f"{guess.lower()} is not in the word try again. You now have one less guess than you had before.")
+	elif guess == 'd':
+		print(f"{guess.lower()} is not in the word try again. You now have one less guess than you had before.")
+	elif guess == 'e':
+		print(f"{guess.lower()} is not in the word try again. You now have one less guess than you had before.")
+	elif guess == 'f':
+		print(f"{guess.lower()} is not in the word try again. You now have one less guess than you had before.")
+	elif guess == 'g':
+		print(f"{guess.lower()} is not in the word try again. You now have one less guess than you had before.")
+	elif guess == 'z':
+		print(f"{guess.lower()} is not in the word try again. You now have one less guess than you had before.")
+	elif guess == 'i':
+		print(f"{guess.lower()} is not in the word try again. You now have one less guess than you had before.")
+	elif guess == 'j':
+		print(f"{guess.lower()} is not in the word try again. You now have one less guess than you had before.")
+	elif guess == 'k':
+		print(f"{guess.lower()} is not in the word try again. You now have one less guess than you had before.")
+	elif guess == 'l':
+		print(f"{guess.lower()} is not in the word try again. You now have one less guess than you had before.")
+	elif guess == 'm':
+		print(f"{guess.lower()} is not in the word try again. You now have one less guess than you had before.")
+	elif guess == 'q':
+		print(f"{guess.lower()} is not in the word try again. You now have one less guess than you had before.")
+	elif guess == 'r':
+		print(f"{guess.lower()} is not in the word try again. You now have one less guess than you had before.")
+	elif guess == 's':
+		print(f"{guess.lower()} is not in the word try again. You now have one less guess than you had before.")
+	elif guess == 'u':
+		print(f"{guess.lower()} is not in the word try again. You now have one less guess than you had before.")
+	elif guess == 'v':
+		print(f"{guess.lower()} is not in the word try again. You now have one less guess than you had before.")
+	elif guess == 'w':
+		print(f"{guess.lower()} is not in the word try again. You now have one less guess than you had before.")
+	elif guess == 'x':
+		print(f"{guess.lower()} is not in the word try again. You now have one less guess than you had before.")
+	elif guess == 'p':
+		print(f"{guess.lower()} is the first letter in the word.       p _ _ _ _ _")
+	elif guess == 'y':
+		print(f"{guess.lower()} is the first letter in the word.       _ y _ _ _ _")
+	elif guess == 't':
+		print(f"{guess.lower()} is the first letter in the word.       _ _ t _ _ _")
+	elif guess == 'h':
+		print(f"{guess.lower()} is the first letter in the word.       _ _ _ h _ _")
+	elif guess == 'o':
+		print(f"{guess.lower()} is the first letter in the word.       _ _ _ _ o _")
+	elif guess == 'n':
+		print(f"{guess.lower()} is the first letter in the word.       _ _ _ _ _ n")
+	elif guess == 'Give Up':
+		print("Nice try. The word was Python. Better luck next time.")
+		break
+	elif guess == 'I Win':
+		print("Nice job! You got the word. Hopefully you can look back at the letters you got right to figure out what the word was. The word will not be revealed at this moment incase you cheated.")
+		break
+	else:
+		print(f"{guess.lower()} is not an option. You have to input a letter, nothing else. Try Again. This doesn't count as losing a guess unless you do it three times in a row.")
+		

@@ -1,0 +1,12 @@
+print("Hello, welcome to A Pizza Shop.")
+prompt = "\nWhat toppings would you like?:"
+prompt += "\nEnter 'Finished' when there are no longer toppings you would like to have added to your pizza."
+
+while True:
+	topping = input(prompt)
+
+	if topping == 'Finished':
+		print("Thank you, your pizza will be done in a couple of moments.")
+		break
+	else:
+		print(f"Adding {topping.title()} to your pizza.")

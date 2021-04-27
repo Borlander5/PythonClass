@@ -1,0 +1,6 @@
+def make_shirt(shirt_size, shirt_caption1='in', shirt_caption2='god', shirt_caption3='we', shirt_caption4='trust'):
+	"""Display the size of a shirt and what words are on the shirt."""
+	print(f"\nThe shirt is size {shirt_size.title()}.")
+	print(f"On it it says {shirt_caption1.title()} {shirt_caption2.title()} {shirt_caption3.title()} {shirt_caption4.title()}.")
+
+make_shirt(shirt_size='xL')

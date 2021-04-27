@@ -1,0 +1,30 @@
+class MountainLemur:
+	def __init__(self, color, lemur_height_from_ground, native_to):
+		self.color = color
+		self.lemur_height_from_ground = lemur_height_from_ground
+		self.native_to = native_to
+		if native_to == "Madagascar":
+			self.type = "It is from Madagascar"
+		else:
+			self.type = "imposter"
+		print("Guess what, you just met a mountain lemur")
+
+	def leap(self):
+		if self.lemur_height_from_ground <= 0:
+			print("The mountain lemur is too tired and needs to rest")
+		else:
+			self.lemur_height_from_ground = self.lemur_height_from_ground - 1
+			print(f"The mountain lemur just leaped")
+
+a_mountain_lemur = MountainLemur("black and white", 6, "Madagascar")
+print(a_mountain_lemur.color)
+print(a_mountain_lemur.lemur_height_from_ground)
+print(a_mountain_lemur.native_to)
+print(a_mountain_lemur.type)
+a_mountain_lemur.leap()
+a_mountain_lemur.leap()
+a_mountain_lemur.leap()
+a_mountain_lemur.leap()
+a_mountain_lemur.leap()
+a_mountain_lemur.leap()
+a_mountain_lemur.leap()

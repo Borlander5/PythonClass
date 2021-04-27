@@ -1,0 +1,5 @@
+for value in range(1, 1000001):
+	number_of_characters_to_print = (value % 50) + 1
+	space_to_print = "  " * number_of_characters_to_print
+	thing_to_print = "Lemur" * number_of_characters_to_print
+	print(space_to_print + thing_to_print)

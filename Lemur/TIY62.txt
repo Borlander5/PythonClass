@@ -1,0 +1,9 @@
+Fav_Numbers = {
+	'Hunky': '978',
+	'Chunky': '492',
+	'Wunky': '397',
+	'Flame_Thrower': '7',
+	'Clock': '1033',
+	}
+if 'dynamite' not in Fav_Numbers.keys():
+	print("We need more dyamite!")

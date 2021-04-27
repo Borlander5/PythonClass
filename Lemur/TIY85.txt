@@ -1,0 +1,5 @@
+def country_info(city_name, country_name):
+	"""Display the name of a city as well as the name of the country it is in"""
+	print(f"\n{city_name.title()} is in {country_name.title()}.")
+
+country_info('islamabad', 'pakistan')
