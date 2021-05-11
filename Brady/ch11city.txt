@@ -1,0 +1,28 @@
+from city_place import get_city_country
+
+print("Enter 'q' at any time to quit.")
+while True:
+	city = input("Please give me a city: ")
+	if city == 'q':
+		break
+	country = input("Please give me a country: ")
+	if country == 'q':
+		break
+
+	city_country = get_city_country(city, country)
+	print(f"{city_country}")
+
+
+import unittest
+from city_place import get_city_country
+
+class NamesTestCase(unittest.TestCase):
+
+	def test_city_country(self):
+		city_country = get_city_country('atascadero', 'united states')
+		self.assertEqual(city_country, 'Atascadero United States')
+
+if __name__ == '__main__':
+	unittest.main()
+
+

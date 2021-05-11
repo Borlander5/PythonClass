@@ -1,0 +1,22 @@
+from junk import Toygun
+
+my_toy_gun = ToyGun('red', 12, 'nerf')
+
+my_toy_gun.color_gun()
+my_toy_gun.gun_bullet_count()
+my_toy_gun.gun_ammo_type()
+my_toy_gun.shoot()
+my_toy_gun.shoot()
+my_toy_gun.shoot()
+my_toy_gun.shoot()
+my_toy_gun.shoot()
+my_toy_gun.shoot()
+my_toy_gun.shoot()
+my_toy_gun.shoot()
+my_toy_gun.shoot()
+my_toy_gun.shoot()
+my_toy_gun.shoot()
+my_toy_gun.shoot()
+my_toy_gun.shoot()
+my_toy_gun.shoot()
+my_toy_gun.shoot()

@@ -1,0 +1,48 @@
+def favorite_book(book):
+	print(f"One of my favorite books is {book.title()}.")
+
+favorite_book('Harry Potter and the Goblet of Fire')
+
+
+
+print("I am going to make a shirt!")
+def make_shirt(shirt_size, shirt_message):
+	print(f"The shirt size is {shirt_size}.")
+	print(f"The shirt will say '{shirt_message}'.")
+
+make_shirt(shirt_size='medium', shirt_message='I like Programming!')
+
+
+
+
+def build_profile(first, last, **user_info):
+	user_info['first_name'] = first
+	user_info['last_name'] = last
+	return user_info
+
+user_profile = build_profile('Brady', 'Cordero',
+			     location='Nampa',
+			     Occupation='Student')
+print(user_profile)
+
+
+
+
+def get_formatted_name(first_name, last_name):
+	full_name = f"{first_name} {last_name}"
+	return full_name.title()
+
+while True:
+	print("Please tell me your name:")
+	print("(enter 'q' at any time to quit)")
+	
+	f_name = input("First name: ")
+	if f_name == 'q':
+	    break
+	
+	l_name = input("Last name: ")
+	if l_name == 'q':
+	    break
+
+	formatted_name = get_formatted_name(f_name, l_name)
+	print(f"Hello, {formatted_name}!")
