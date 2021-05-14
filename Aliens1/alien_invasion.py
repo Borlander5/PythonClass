@@ -69,7 +69,12 @@ class AlienInvasion:
     def _check_bullet_alien_collisions(self):
         """Respond to bullet_alien collisions."""
         #Remove any bullets and aliens that have collided.
-        collisions = pygame.sprite.groupcollide(self.bullets, self.aliens, True, False)
+        AliveAliens = pygame.sprite.Group()
+        for alien in self.aliens:
+            if alien.alive == True:
+                AliveAliens.add(alien)
+
+        collisions = pygame.sprite.groupcollide(self.bullets, AliveAliens, True, False)
 
         if collisions:
             #self.alien.image = pygame.image.load("Aliens1\\images\\boom.bmp")
@@ -78,8 +83,9 @@ class AlienInvasion:
 
             for aliens in collisions.values():
                 for alien in aliens:
-                    self.stats.score += self.settings.alien_points
-                    alien.explode()
+                    if alien.alive:
+                        self.stats.score += self.settings.alien_points
+                        alien.explode()
             self.sb.prep_score()
             self.sb.prep_ships()
             self.sb.check_high_score()
