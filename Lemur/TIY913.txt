@@ -1,0 +1,14 @@
+from random import choice
+numbers = ['one', 'two', 'three', 'four', 'five', 'six']
+dice_number = choice(numbers)
+print(dice_number)
+
+from random import choice
+numbers = ['one', 'two', 'three', 'four', 'five', 'six' 'seven', 'eight', 'nine', 'ten']
+dice_number = choice(numbers)
+print(dice_number)
+
+from random import choice
+numbers = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty']
+dice_number = choice(numbers)
+print(dice_number)

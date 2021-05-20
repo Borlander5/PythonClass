@@ -1,0 +1,3 @@
+alien_colors = ['red', 'yellow', 'green']
+if 'green' in alien_colors:
+	print("You just earned five stinken good points!")

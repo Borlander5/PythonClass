@@ -1,0 +1,5 @@
+age = input("How old are you?  ")
+if int(age) < 15:
+	print("You are a baby")
+else:
+	print("You are old!")

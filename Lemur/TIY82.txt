@@ -1,0 +1,5 @@
+def fav_book(book_name):
+	"""Display what my favorite book is"""
+	print(f"My favorite book is {book_name.title()}.")
+
+fav_book('the bible')

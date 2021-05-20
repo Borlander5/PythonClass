@@ -1,0 +1,37 @@
+class Restaurant:
+
+	def __init__(place, name, type):
+		place.name = name
+		place.type = type
+
+	def describe_restaurant(place):
+		print(f"{place.name} is a {place.type} restaurant!")
+
+	def open_restaurant(place):
+		print(f"{place.name} is now open!")
+
+my_place = Restaurant('Bradys Spaghetti', 'Italian')
+
+my_place.describe_restaurant()
+my_place.open_restaurant()
+
+class User:
+
+	def __init__(self, name, age, height, weight):
+		self.name = name
+		self.age = age
+		self.height = height
+		self.weight = weight
+
+	def describe_user(self):
+		print(f"My name is {self.name} and I am {self.age} years old!")
+
+	def user_size(self):
+		print(f"I am {self.height} tall and I weigh {self.weight}.")
+
+my_user = User('Brady', 15, '5 ft 10in', 128)
+
+my_user.describe_user()
+my_user.user_size() 
+
+

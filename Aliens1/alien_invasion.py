@@ -10,6 +10,7 @@ from bullet import Bullet
 from alien import Alien
 from button import Button
 from scoreboard import Scoreboard
+from datetime import date, timedelta, datetime
 
 
 class AlienInvasion:
@@ -25,7 +26,7 @@ class AlienInvasion:
         #self.settings.screen_width = self.screen.get_rect().width
         #self.settings.screen_height = self.screen.get_rect().height
 
-        pygame.display.set_caption("Aliem Invasion")
+        pygame.display.set_caption("Alien Invasion")
 
         #Create an instance to store game statistics.
         self.stats = GameStats(self)
@@ -34,7 +35,6 @@ class AlienInvasion:
         self.ship = Ship(self)
         self.bullets = pygame.sprite.Group()
         self.aliens = pygame.sprite.Group()
-        self.alien = Alien(self)
         self.alien_number = 1
 
 
@@ -69,18 +69,23 @@ class AlienInvasion:
     def _check_bullet_alien_collisions(self):
         """Respond to bullet_alien collisions."""
         #Remove any bullets and aliens that have collided.
-        collisions = pygame.sprite.groupcollide(
-            self.bullets, self.aliens, True, True)
+        AliveAliens = pygame.sprite.Group()
+        for alien in self.aliens:
+            if alien.alive == True:
+                AliveAliens.add(alien)
+
+        collisions = pygame.sprite.groupcollide(self.bullets, AliveAliens, True, False)
 
         if collisions:
-            self.alien.image = pygame.image.load("Aliens1\\images\\boom.bmp")
-            self._update_aliens()
-            sleep(.5)
-            self.alien.image = pygame.image.load("Aliens1\\images\\unnamed.bmp")   
-            self._update_aliens()
+            #self.alien.image = pygame.image.load("Aliens1\\images\\boom.bmp")
+            #self.alien.rect = self.alien.image.get_rect()
+            #self._update_aliens
 
             for aliens in collisions.values():
-                self.stats.score += self.settings.alien_points * len(aliens)
+                for alien in aliens:
+                    if alien.alive:
+                        self.stats.score += self.settings.alien_points
+                        alien.explode()
             self.sb.prep_score()
             self.sb.prep_ships()
             self.sb.check_high_score()
@@ -201,8 +206,11 @@ class AlienInvasion:
         """Check if the fleet is at an edge, then update the positions of all aliens in the fleet."""
         #self._check_fleet_edges()
         self.aliens.update()
-          
         
+        for alien in self.aliens:
+            if alien.alive == False and datetime.now() >= alien.destroyAfter:
+                self.aliens.remove(alien)
+                
         #Look for alien-ship collisions.
         if pygame.sprite.spritecollideany(self.ship, self.aliens):
             self._ship_hit()

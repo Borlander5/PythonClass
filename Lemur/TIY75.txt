@@ -1,0 +1,44 @@
+print("NEXT! Hello there, welcome to the SMSOA or the Secret Mercenary Society Of Afghanastan. Here we sell mercenaries according to there age.")
+number = input("Tell me the age of the mercenary you would like to buy and then head over to desk at your nine o'clock to pay for them.")
+number = int(number)
+
+if number == 3:
+	print(f"\nI have some bad news and I have some more bad news. The bad news is we have no mercenaries in this age group. The other bad news is, your holding up the line and since we have no mercenaries of the age you want you will have to leave and come back later. NEXT!")
+elif number == 4:
+	print(f"\nOk then that would be $10 dollars at the next desk, thank you. NEXT!")
+elif number == 5: 
+	print(f"\nOk then that would be $10 dollars at the next desk, thank you. NEXT!")
+elif number == 6:
+	print(f"\nOk then that would be $10 dollars at the next desk, thank you. NEXT!")
+elif number == 7:
+	print(f"\nOk then that would be $10 dollars at the next desk, thank you. NEXT!")
+elif number == 8:
+	print(f"\nOk then that would be $10 dollars at the next desk, thank you. NEXT!")
+elif number == 9:
+	print(f"\nOk then that would be $10 dollars at the next desk, thank you. NEXT!")
+elif number == 10:
+	print(f"\nOk then that would be $10 dollars at the next desk, thank you. NEXT!")
+elif number == 11:
+	print(f"\nOk then that would be $10 dollars at the next desk, thank you. NEXT!")
+elif number == 12:
+	print(f"\nOk then that would be $10 dollars at the next desk, thank you. NEXT!")
+elif number == 13:
+	print(f"\nThat would be $25 at the next desk, thank you. NEXT!")
+elif number == 14:
+	print(f"\nThat would be $25 at the next desk, thank you. NEXT!")
+elif number == 15:
+	print(f"\nThat would be $25 at the next desk, thank you. NEXT!")
+elif number == 16:
+	print(f"\nThat would be $25 at the next desk, thank you. NEXT!")
+elif number == 17:
+	print(f"\nThat would be $25 at the next desk, thank you. NEXT!")
+elif number == 2:
+	print(f"\nThat would be $5 at the next desk, thank you. NEXT!")
+elif number == 0:
+	print(f"\nI have some bad news and I have some more bad news. The bad news is we have no mercenaries in this age group. The other bad news is, your holding up the line and since we have no mercenaries of the age you want you will have to leave and come back later. NEXT!")
+elif number == 1:
+	print(f"\nOh, my your asking for the most dangerous one of them all, Little Jimmy. Be very careful when your with this little guy, his fastest kill rate is 8362 people per minute. That will be $2560 at the next desk. NEXT!")
+elif number >= 18:
+	print(f"\nThat would be $50 at the next desk, thank you. NEXT!")
+else:
+	print("\nI'm sorry be we have no mercenaries in that age catagory. And would you be so king as to move. Your holding up the line. NEXT!")

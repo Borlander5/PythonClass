@@ -1,0 +1,17 @@
+def city_country(c_name, C_name):
+	city_country_name = f"{c_name} {C_name}"
+	return city_country_name.title()
+
+while True:
+	print("Please tell me a city and country:")
+	print("(enter 'q' at any time to quit)")
+	
+	city_name = input("City name: ")
+	if city_name == 'q':
+	    break
+	
+	country_name = input("Country name: ")
+	if country_name == 'q':
+	    break
+
+	print(f"{city_name}, {country_name}")

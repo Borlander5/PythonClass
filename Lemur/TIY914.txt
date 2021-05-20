@@ -1,0 +1,21 @@
+from random import choice
+numbers = ['one', 'two', 'three', 'four', 'five', 'six', 'zero', 'seven', 'eight', 'nine', 'a', 'g', 'f', 'u', 'z']
+dice_number = choice(numbers)
+print(dice_number)
+
+from random import choice
+numbers = ['one', 'two', 'three', 'four', 'five', 'six', 'zero', 'seven', 'eight', 'nine', 'a', 'g', 'f', 'u', 'z']
+dice_number = choice(numbers)
+print(dice_number)
+
+from random import choice
+numbers = ['one', 'two', 'three', 'four', 'five', 'six', 'zero', 'seven', 'eight', 'nine', 'a', 'g', 'f', 'u', 'z']
+dice_number = choice(numbers)
+print(dice_number)
+
+from random import choice
+numbers = ['one', 'two', 'three', 'four', 'five', 'six', 'zero', 'seven', 'eight', 'nine', 'a', 'g', 'f', 'u', 'z']
+dice_number = choice(numbers)
+print(dice_number)
+
+print("If you have this stinken good combunation of numbers and letters, you just one 150 million dollars. Please send us your credit card number so that we can transfer the money over immediatily.")

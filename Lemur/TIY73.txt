@@ -1,0 +1,9 @@
+number = input("Enter a number, and I'll tell you if it's a multiple of ten or not: ")
+number = int(number)
+
+if number % 10 == 0:
+	print(f"\nGuess what. The number {number} is a multiple of ten!!!")
+elif number == 666:
+	print(f"\nNo, just no. That is not a multiple of ten. Please, do not mention that number ever again. Please.")
+else:
+	print(f"\nI'm sorry but {number} is not a multiple of ten unfortunately.")

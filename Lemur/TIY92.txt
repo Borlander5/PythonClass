@@ -1,0 +1,57 @@
+class Restaurant:
+	"""Do something in relation to a resturant."""
+
+	def __init__(self, name, cuisine):
+		"""Initialize name and couisine stuff."""
+		self.name = name
+		self.cuisine = cuisine
+
+	def describe_restaurant(self):
+		"""Describe the restaurant."""
+		print(f"{self.name} is a {self.cuisine} restaurant.")
+
+	def open_restaurant(self):
+		"""Anounce that the restaurant is open."""
+		print(f"The restaurant {self.name} is now open!!!")
+
+the_restaurant = Restaurant('Pandooku', 'Chinese')
+print(the_restaurant.name)
+print(the_restaurant.cuisine)
+class Restaurant:
+	"""Do something in relation to a resturant."""
+
+	def __init__(self, name, cuisine):
+		"""Initialize name and couisine stuff."""
+		self.name = name
+		self.cuisine = cuisine
+
+	def describe_restaurant(self):
+		"""Describe the restaurant."""
+		print(f"{self.name} is a {self.cuisine} restaurant.")
+
+	def open_restaurant(self):
+		"""Anounce that the restaurant is open."""
+		print(f"The restaurant {self.name} is now open!!!")
+
+the_restaurant = Restaurant('Mc Dennies', 'Breakfast In Bed')
+print(the_restaurant.name)
+print(the_restaurant.cuisine)
+class Restaurant:
+	"""Do something in relation to a resturant."""
+
+	def __init__(self, name, cuisine):
+		"""Initialize name and couisine stuff."""
+		self.name = name
+		self.cuisine = cuisine
+
+	def describe_restaurant(self):
+		"""Describe the restaurant."""
+		print(f"{self.name} is a {self.cuisine} restaurant.")
+
+	def open_restaurant(self):
+		"""Anounce that the restaurant is open."""
+		print(f"The restaurant {self.name} is now open!!!")
+
+the_restaurant = Restaurant('R', 'Seafood')
+print(the_restaurant.name)
+print(the_restaurant.cuisine)

@@ -1,0 +1,2 @@
+Person = {'first_name': 'Cole', 'last_name': 'Meador', 'age': '14', 'city': 'Paso'}
+print(Person)
