@@ -34,6 +34,7 @@ class AlienInvasion:
 
         self.ship = Ship(self)
         self.bullets = pygame.sprite.Group()
+        self.alien_bullets = pygame.sprite.Group()
         self.aliens = pygame.sprite.Group()
         self.alien_number = 1
 
@@ -58,11 +59,17 @@ class AlienInvasion:
         """Update positon of bullets and get rid of old bullets."""
         #Update bullet positions.
         self.bullets.update()
+        self.alien_bullets.update()
 
         #Get rid of bullets thave have disappeared.
         for bullet in self.bullets.copy():
             if bullet.rect.bottom <= 0:
                 self.bullets.remove(bullet)
+
+        #Get rid of bullets thave have disappeared.
+        for bullet in self.alien_bullets.copy():
+            if bullet.rect.top >= self.settings.screen_height:
+                self.alien_bullets.remove(bullet)
             
         self._check_bullet_alien_collisions()
 
@@ -118,6 +125,7 @@ class AlienInvasion:
             self.aliens.empty()
 
             self.bullets.empty()
+            self.alien_bullets.empty()
 
             self._create_alien_boss()
             self.ship.center_ship()
@@ -148,7 +156,7 @@ class AlienInvasion:
     def _fire_bullet(self):
         """Create a new bullet and add it to the bullets group."""
         if len(self.bullets) < self.settings.bullets_allowed:
-            new_bullet = Bullet(self)
+            new_bullet = Bullet(self, False, self.ship)
             self.bullets.add(new_bullet)
 
     def _update_screen(self):
@@ -156,6 +164,8 @@ class AlienInvasion:
         self.screen.fill(self.settings.bg_color)
         self.ship.blitme()
         for bullet in self.bullets.sprites():
+            bullet.draw_bullet()
+        for bullet in self.alien_bullets.sprites():
             bullet.draw_bullet()
         self.aliens.draw(self.screen)
 
@@ -210,7 +220,10 @@ class AlienInvasion:
         for alien in self.aliens:
             if alien.alive == False and datetime.now() >= alien.destroyAfter:
                 self.aliens.remove(alien)
-                
+            elif alien.alive == True and alien.WannaFire():
+                new_bullet = Bullet(self, True, alien)           
+                self.alien_bullets.add(new_bullet)
+
         #Look for alien-ship collisions.
         if pygame.sprite.spritecollideany(self.ship, self.aliens):
             self._ship_hit()

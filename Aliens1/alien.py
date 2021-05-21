@@ -15,7 +15,7 @@ class Alien(Sprite):
         self.settings = ai_game.settings
 
         #Load the alien image and set its rect attribute.
-        self.image = pygame.image.load("Aliens1\\images\\unnamed.bmp")
+        self.image = pygame.image.load("/Users/bradleyweldy/pythonclass/Aliens1/images/unnamed.bmp")
         self.rect = self.image.get_rect()
 
         
@@ -61,11 +61,13 @@ class Alien(Sprite):
             self.xDirection += 1
         
     def explode(self):
-        self.image = pygame.image.load("Aliens1\\images\\explosion2.gif")
+        self.image = pygame.image.load("/Users/bradleyweldy/pythonclass/Aliens1/images/explosion2.gif")
         self.rect = self.image.get_rect()
         self.alive = False
         self.destroyAfter = datetime.now() + timedelta(milliseconds = 500)
 
+    def WannaFire(self):
+        return True
  
     """
     def update(self):        
